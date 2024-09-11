@@ -5,7 +5,7 @@
       <div class="">
           <h1 class="text-2xl  font-semibold mb-2 ">
             <NuxtLink to="/">
-              หัดแปล ไม่มีอะไรหรอก
+              Phanuphun.na - Blog
             </NuxtLink>
           </h1>
       </div>
