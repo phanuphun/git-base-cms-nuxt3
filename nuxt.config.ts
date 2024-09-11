@@ -4,7 +4,7 @@ export default defineNuxtConfig({
   components : true ,
   css: [
     // '~/assets/css/github-markdown-dark.css',
-    '~/assets/css/github-markdown-light.css',
+    //'~/assets/css/github-markdown-light.css',
     // '~/assets/css/github-markdown.css'
   ],
   modules: ['@nuxt/content', '@nuxtjs/tailwindcss', '@nuxt/image'],
