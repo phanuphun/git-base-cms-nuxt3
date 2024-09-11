@@ -1,6 +1,6 @@
 ---
 title: บันทึกวิชา Operating System Labotary
-date: 'วันที่ 11 กันยายน 2567'
+date: '2024-02-06'
 description: โน๊ตนี้เป็นการจดบันทึกของวิชา Operating System Labotory โดย os ฝั่ง server ที่ใช้จะเป็น Ubuntu server 22.04 และฝั่ง client ที่ใช้จะเป็น ubuntu mate
 tags: ['note']
 thumbnail: 'https://lh3.googleusercontent.com/proxy/2sHU1m4WDt4vOY7Ahz34PUI8lT9VOllsfqQfhZohMOTpcoQn_emN3XgsfiYtaEI9ZJMtszIcoHiE53xWbVJ0iXkwQxlh' 

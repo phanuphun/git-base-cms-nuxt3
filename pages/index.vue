@@ -10,7 +10,7 @@
 <template>
     <div>
         <ContentList path="/articles" fields="title,date,thumbnail" :query="{
-            draft: false,
+            draft: true,
             sort: [
                 {
                     date: -1

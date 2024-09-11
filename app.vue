@@ -23,7 +23,7 @@
     <!-- ./Header Content -->
 
     <!-- Main Content -->
-    <div class="p-8 border-l-2 border-r-2 border-gray-400 border-dashed">
+    <div class="p-8 h-auto min-h-screen border-l-2 border-r-2 border-gray-400 border-dashed">
       <NuxtPage />
     </div>
     <!-- ./Main Content -->
