@@ -1,22 +1,24 @@
 <script setup lang="ts">
     useHead({
-        title:"หน้าแรก",
+        title:"Home",
         meta:[
-            {name: "description" , content:"ร้ายค้าขายอุปกรณ์คอมพิวเตอร์"}
+            {name: "description" , content:"Phanuphun.na-Blog"}
         ]
     })
+
+    const query = {
+                    draft: true,
+                    sort: [
+                        {
+                            date: -1
+                        },
+                    ]
+                }
 </script>
 
 <template>
     <div>
-        <ContentList path="/articles" fields="title,date,thumbnail" :query="{
-            draft: true,
-            sort: [
-                {
-                    date: -1
-                },
-            ]
-        }" v-slot="{ list }">
+        <ContentList path="/articles" fields="title,date,thumbnail" :query="query" v-slot="{ list }">
             <div v-for="a in list" :key="a._path"
                 class="blog-card bg-gray-100 overflow-hidden mb-4 pb-4 rounded-md
                 hover:bg-gray-300 cursor-pointer scale-1 hover:scale-[1.01] duration-200">

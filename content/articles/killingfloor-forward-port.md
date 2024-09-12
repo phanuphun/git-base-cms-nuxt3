@@ -5,6 +5,7 @@ description: Killing floor วิธีสร้างห้องเล่น�
 tags: ['Killing Floor' , 'Forword Port' , 'Game' ]
 thumbnail: 'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1250/header.jpg?t=1697726402' 
 slug: "killingfloor-forward-port"
+draft: false 
 ---
 
 ### การ Forward port

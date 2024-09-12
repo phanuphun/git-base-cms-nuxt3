@@ -5,6 +5,7 @@ description: โน๊ตนี้เป็นการจดบันทึก�
 tags: ['note']
 thumbnail: 'https://lh3.googleusercontent.com/proxy/2sHU1m4WDt4vOY7Ahz34PUI8lT9VOllsfqQfhZohMOTpcoQn_emN3XgsfiYtaEI9ZJMtszIcoHiE53xWbVJ0iXkwQxlh' 
 slug: "os-lab-note"
+draft: true 
 ---
 
 # อ่านก่อน

@@ -5,6 +5,7 @@ description: เรื่องราวความรักระหว่า�
 tags: ['Mod' , 'Translate' , 'Game' ]
 thumbnail: '/img/hk1986.png' 
 slug: "hk1986-th-translate"
+draft: false
 ---
 
 ### เนื้อเรื่องย่อ

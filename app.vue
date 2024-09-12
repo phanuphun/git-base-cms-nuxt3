@@ -40,7 +40,6 @@
 
 <style>
 /*light*/
-
 .markdown-body {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -376,7 +375,7 @@
 .markdown-body ul ol ol,
 .markdown-body ol ul ol,
 .markdown-body ol ol ol {
-  list-style-type: lower-alpha;
+  list-style-type: lower-roman;
 }
 
 .markdown-body dd {
