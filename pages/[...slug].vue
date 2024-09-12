@@ -17,7 +17,7 @@
             <img :src="doc.thumbnail" :alt="doc.title" class="h-60 w-full object-cover mt-2">
           </div>
         </header>
-        <div class="w-full mt-4 markdown-body">
+        <div class=" mt-4 markdown-body">
           <ContentRenderer :value="doc" class="prose max-w-full"></ContentRenderer>
         </div>
       </ContentDoc>

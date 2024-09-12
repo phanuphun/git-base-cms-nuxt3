@@ -4,8 +4,8 @@ date: '2017-11-09'
 description: Killing floor วิธีสร้างห้องเล่นกับเพื่อนจะใช้วิธีการ Forward Port เอานะครับ มีหลายคนไม่รู้วิธีในการสร้างห้องเล่นกับเพื่อน เนื่องจากได้เกมมาฟรีเเล้วอยากเล่นกับเพื่อนโดยที่ไม่ต้องเข้าเซิฟเวอร์ต่างชาติที่ปิงสูงก็เลยไปหาวิธีมาได้ตามคู่มือต่อไปนี้เลยครับบ
 tags: ['Killing Floor' , 'Forword Port' , 'Game' ]
 thumbnail: 'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1250/header.jpg?t=1697726402' 
-slug: "killingfloor-forward-port"
-draft: false 
+path: "killingfloor-forward-port"
+draft: false
 ---
 
 ### การ Forward port
