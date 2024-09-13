@@ -10,7 +10,7 @@ export default defineNuxtConfig({
     '/': { prerender: true }
   },
   content: {
-   documentDriven: true,
+   documentDriven: false,
    highlight: {
    theme: 'monokai',
    },
