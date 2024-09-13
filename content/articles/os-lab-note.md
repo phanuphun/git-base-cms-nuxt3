@@ -1,5 +1,5 @@
 ---
-title: บันทึกวิชา Operating System Labotary
+title: บันทึก Operating System Labotary
 date: '2024-02-06'
 description: โน๊ตนี้เป็นการจดบันทึกของวิชา Operating System Labotory โดย os ฝั่ง server ที่ใช้จะเป็น Ubuntu server 22.04 และฝั่ง client ที่ใช้จะเป็น ubuntu mate
 tags: ['OS']
