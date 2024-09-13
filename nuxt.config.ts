@@ -3,16 +3,16 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   components : true ,
   modules: [
-    '@nuxt/content', 
-    '@nuxtjs/tailwindcss', 
+    '@nuxt/content',
+    '@nuxtjs/tailwindcss',
     '@nuxt/image'],
   routeRules: {
     '/': { prerender: true }
   },
   content: {
-    documentDriven: true,
-    highlight: {
-      theme: 'monokai',
-    },
+   //  documentDriven: true,
+   highlight: {
+   theme: 'monokai',
+   },
   }
 })
