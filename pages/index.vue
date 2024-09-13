@@ -36,9 +36,9 @@ const query = {
                             <div class="mb-2">
                                 {{ a.description }}
                             </div>
-                            <!-- <div class="w-full flex flex-wrap gap-2">
+                            <div class="w-full flex flex-wrap gap-2">
                                 <Tag v-for="tag in a.tags" class="">{{ tag }}</Tag>
-                            </div> -->
+                            </div>
                         </div>
                     </NuxtLink>
                 </div>
