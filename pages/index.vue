@@ -1,19 +1,24 @@
 <script setup lang="ts">
-useHead({
-    title: "Home",
-    meta: [
-        { name: "description", content: "Phanuphun.na-Blog" }
-    ]
-})
+  import { usePageState } from '~/composables/usePageState'
+  import { useReadState } from '~/composables/useReadState'
+  usePageState()
+  const readState = useReadState()
 
-const query = {
-    draft: true,
-    sort: [
-        {
-            date: -1
-        },
-    ]
-}
+  useHead({
+      title: "Home",
+      meta: [
+          { name: "description", content: "Phanuphun.na-Blog" }
+      ]
+  })
+
+  const query = {
+      draft: true,
+      sort: [
+          {
+              date: -1
+          },
+      ]
+  }
 </script>
 
 <template>
@@ -22,7 +27,7 @@ const query = {
             <template #default="{ list }">
                 <div v-for="a in list" :key="a._path" class="blog-card bg-gray-100 overflow-hidden mb-4 pb-4 rounded-md
                     hover:bg-gray-300 cursor-pointer scale-1 hover:scale-[1.01] duration-200">
-                    <NuxtLink :to="`/${a.path}`">
+                    <NuxtLink :to="`/articles/${a.path}`">
                         <div class="h-60 w-full">
                             <img :src="a.thumbnail" :alt="a.title" class="w-full h-full object-cover">
                         </div>

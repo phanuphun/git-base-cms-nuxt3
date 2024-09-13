@@ -1,7 +1,10 @@
 <script setup lang="ts">
+  import { usePageState } from '~/composables/usePageState'
+  import { useReadState } from '~/composables/useReadState'
+  usePageState()
+  const readState = useReadState()
 
   const { slug: path } = useRoute().params
-
 </script>
 
 <template>
@@ -17,6 +20,9 @@
             <img :src="doc.thumbnail" :alt="doc.title" class="h-60 w-full object-cover mt-2">
           </div>
         </header>
+        <div class="my-4">
+          <Toc :contents="doc.body?.toc?.links!"></Toc>
+        </div>
         <div class=" mt-4 ">
           <ContentRenderer :value="doc" class=" prose  max-w-full"></ContentRenderer>
         </div>

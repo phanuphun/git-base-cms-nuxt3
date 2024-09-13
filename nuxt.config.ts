@@ -5,14 +5,16 @@ export default defineNuxtConfig({
   modules: [
     '@nuxt/content',
     '@nuxtjs/tailwindcss',
-    '@nuxt/image'],
+    '@nuxt/image',
+  ],
+
   routeRules: {
     '/': { prerender: true }
   },
   content: {
-   documentDriven: false,
+   documentDriven: false, // deploy error will trigger if u turn on
    highlight: {
-   theme: 'monokai',
+      theme: 'monokai',
    },
   }
 })

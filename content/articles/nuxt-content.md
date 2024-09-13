@@ -1,20 +1,20 @@
 ---
-title: บันทึก Nuxt Content
+title: บันทึกการใช้ Nuxt Content
 date: '2024/09/12'
-description: Nuxt Content เป็นโมดูลของ Nuxt.js ที่ช่วยให้คุณสามารถจัดการและแสดงเนื้อหาต่างๆ ในเว็บไซต์หรือแอปพลิเคชัน โดยใช้ไฟล์ Markdown (.md), JSON, YAML, หรือ CSV ได้อย่างง่ายดาย โดยไม่จำเป็นต้องมีฐานข้อมูลหลังบ้าน (backend database) ซึ่งเหมาะสำหรับการทำเว็บบล็อก, เอกสาร, หรือเว็บไซต์ที่เน้นเนื้อหา
+description: บันทึกการใช้งาน Nuxt Content ในการทำเว็บบล็อคเวอร์ชัน 2.13.2
 tags: ['Nuxt' , 'Nuxt Content']
-thumbnail: 'https://miro.medium.com/v2/resize:fit:864/1*H-hII9inrBamchRCz8EWaw.png' 
+thumbnail: 'https://miro.medium.com/v2/resize:fit:864/1*H-hII9inrBamchRCz8EWaw.png'
 path: "nuxt-content"
-draft: true 
+draft: true
 ---
 
 ### โครงสร้างไฟล์
 - content โฟลเดอร์สำหรับจัดเก็บไฟล์ .md .json .yaml ในการเขียน content
-- page โฟลเดอร์ที่ใช้ในการจัดการ Rounting ต่างๆใน Nuxt 
+- page โฟลเดอร์ที่ใช้ในการจัดการ Rounting ต่างๆใน Nuxt
     - ในโฟลเดอร์นี้จะต้องมีไฟล์ `[...slug.vue]`เพื่อใช้ในการดึงเนื้อหาต่างๆในโฟลเดอร์ Content มาแสดง
 
 ### ContentList
-### ContentDoc 
+### ContentDoc
 
 ### Markdown style ไม่แสดง
 1. ติดตั้งปลั๊กอิน typography ของ Tailwind `npm install @tailwindcss/typography`
