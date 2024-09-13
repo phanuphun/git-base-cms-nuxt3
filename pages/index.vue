@@ -1,4 +1,5 @@
 <script setup lang="ts">
+  import { useDateConverter } from '~/composables/useDateConverter'
   import { usePageState } from '~/composables/usePageState'
   import { useReadState } from '~/composables/useReadState'
   usePageState()
@@ -19,6 +20,11 @@
           },
       ]
   }
+  const formatDate = (dateString: string): string => {
+    return useDateConverter(dateString);
+  }
+
+
 </script>
 
 <template>
@@ -36,9 +42,9 @@
                                 {{ a.title }}
                             </div>
                             <div class="text-sm text-gray-500">
-                                {{ a.date }}
+                                {{ formatDate(a.date) }}
                             </div>
-                            <div class="mb-2">
+                            <div class="my-2">
                                 {{ a.description }}
                             </div>
                             <div class="w-full flex flex-wrap gap-2">
