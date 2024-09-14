@@ -1,20 +1,14 @@
 <script setup lang="ts">
-import { useReadState } from './composables/useReadState';
-import { usePageState } from '~/composables/usePageState'
-usePageState()
-const readState = useReadState()
 
-const search = ref('')
+const tocData = useTocData([])
+const readState = usePageState()
+
 const gitLink = 'https://github.com/phanuphun/phanuphun.na-blog'
+const search = ref('')
 
 const searchParams = computed(() => ({
   where: [{ title: { $contains: search.value } }]
 }))
-
-// try to access front matter
-// const { data: content } = await useAsyncData('a', () => queryContent('/articles').find())
-// console.log(content.value);
-// console.log(content.value?.[0].tags);
 
 </script>
 
@@ -41,7 +35,7 @@ const searchParams = computed(() => ({
     </div>
 
     <!-- search side -->
-    <div class="w-1/4 h-auto border-l-2 border-gray-200 pt-8 px-2">
+    <div class="relative w-1/4 h-auto border-l-2 border-gray-200 pt-8 px-2">
       <input type="text" v-model="search" placeholder="Search..." class="w-full p-2 border border-gray-300" />
 
       <div class="">
@@ -57,7 +51,14 @@ const searchParams = computed(() => ({
           </template>
         </ContentList>
       </div>
+
+      <div class="mt-4 sticky top-4  z-10">
+         <Toc v-if="readState === 'reading'" :contents="tocData"></Toc>
+      </div>
     </div>
   </div>
 
 </template>
+
+<style>
+</style>

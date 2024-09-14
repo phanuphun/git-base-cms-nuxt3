@@ -1,17 +1,11 @@
 <script setup lang="ts">
   import { useDateConverter } from '~/composables/useDateConverter'
-  import { usePageState } from '~/composables/usePageState'
-  import { useReadState } from '~/composables/useReadState'
-  usePageState()
-  const readState = useReadState()
-
   useHead({
       title: "Home",
       meta: [
           { name: "description", content: "Phanuphun.na-Blog" }
       ]
   })
-
   const query = {
       draft: true,
       sort: [
@@ -24,7 +18,7 @@
     return useDateConverter(dateString);
   }
 
-
+  usePageState()
 </script>
 
 <template>

@@ -6,6 +6,7 @@
       depth: number;
       children?: TocLink[];
   }
+
   interface Toc {
       title: string;
       depth: number;
