@@ -25,7 +25,7 @@ useTocData(data.value?.body?.toc?.links!) // update toc
                      Date: {{ formatDate(doc.date) }}
                   </div>
 
-                  <img :src="doc.thumbnail" :alt="doc.title" class="h-60 w-full object-cover mt-2">
+                  <!-- <img :src="doc.thumbnail" :alt="doc.title" class="h-60 w-full object-cover mt-2"> -->
                </div>
             </header>
             <div class="mt-4">
