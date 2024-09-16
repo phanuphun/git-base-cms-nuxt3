@@ -1,8 +1,8 @@
 ---
 title: บันทึกการใช้ Nuxt Content
 date: '2024/09/12'
-description: บันทึกการใช้งาน Nuxt Content ในการทำเว็บบล็อคเวอร์ชัน 2.13.2
-tags: ['Nuxt' , 'Nuxt Content']
+description: บันทึกการใช้งาน nuxt Content ในการทำเว็บบล็อคเวอร์ชัน 2.13.2
+tags: ['nuxt' , 'nuxt content' ,'vue']
 thumbnail: 'https://miro.medium.com/v2/resize:fit:864/1*H-hII9inrBamchRCz8EWaw.png'
 path: "nuxt-content"
 draft: true
