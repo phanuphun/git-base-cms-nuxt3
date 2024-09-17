@@ -5,6 +5,7 @@ const formatDate = (dateString: string): string => {
 }
 
 usePageState() // update state
+const isDark = useTheme()
 
 const { slug: path } = useRoute().params // get path doc
 // get toc data from docs
@@ -15,8 +16,8 @@ useTocData(data.value?.body?.toc?.links!) // update toc
 </script>
 
 <template>
-   <article class="bg-white rounded-2xl ">
-      <ContentDoc :path="`/articles/${path}`">
+   <article class="bg-white rounded-2xl" :class="{'dark:dark-t':isDark}">
+      <ContentDoc :path="`/articles/${path}`" >
          <template #default="{ doc }">
             <header>
                <div class="texet-center p-0">
@@ -29,7 +30,9 @@ useTocData(data.value?.body?.toc?.links!) // update toc
                </div>
             </header>
             <div class="mt-4">
-               <ContentRenderer :value="doc" class="prose max-w-full"> </ContentRenderer>
+               <ContentRenderer :value="doc" class="prose max-w-full "
+               :class="{'dark:prose-invert text-white':isDark}">
+               </ContentRenderer>
             </div>
          </template>
          <template #not-found>

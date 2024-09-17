@@ -11,11 +11,12 @@ interface TocLink {
 export const useTocData = (tocData:TocLink[]) =>{
    const readState = usePageState()
    const toc = useState<TocLink[]>('test',()=>[])
-
-   if(readState.value === 'exploring'){
-      toc.value = []
-   }else{
-      toc.value = tocData
+   if(process.client){
+      if(readState.value === 'exploring'){
+         toc.value = []
+      }else{
+         toc.value = tocData
+      }
    }
    return toc
 }

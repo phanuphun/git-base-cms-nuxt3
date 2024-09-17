@@ -1,5 +1,7 @@
 <script setup lang="ts">
 
+const isDark = useTheme()
+
 interface TocLink {
    id: string;
    text: string;
@@ -22,7 +24,8 @@ const props = defineProps<{
 
 <template>
    <div class="w-full  flex flex-col border-2 border-gray-200">
-      <div class="text-md bg-gray-100 p-2 text-center border-b-2 border-gray-200">
+      <div class="text-md bg-gray-100 p-2 text-center border-b-2 border-gray-200"
+      :class="{'dark:bg-gray-800':isDark}">
          Table of Contents
       </div>
       <div class="px-4 py-2">
