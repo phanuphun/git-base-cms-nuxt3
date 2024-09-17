@@ -15,32 +15,30 @@ const searchParams = computed(() => ({
 }))
 
 useHead({
-   bodyAttrs:{
-      class:'dark font-body'
+   bodyAttrs: {
+      class: 'dark font-body'
    }
 })
 
 </script>
 
 <template>
-   <div :class="{'dark:dark-t': isDark}">
-      <div class="w-full flex" >
-         <header class="w-full px-4 py-2 flex flex-wrap justify-between items-center shadow-md shadow-gray-200"
-         :class="{'dark:bg-gray-900 shadow-gray-700': isDark}">
-            <div class="text-xl font-logo">
+   <div :class="{ 'dark:dark-t': isDark }">
+      <div class="w-full flex">
+         <header class="w-full px-4 py-3 flex flex-wrap justify-between items-center shadow-md shadow-gray-200"
+            :class="{ 'dark:bg-gray-900 shadow-none border-b-2 border-white': isDark }">
+            <div class="text-xl font-logo font-semibold ">
                <NuxtLink to="/">Phanuphun.na - Blog</NuxtLink>
             </div>
             <div class="w-auto flex flex-row gap-3">
+               <Icon name="uil:search" size="2rem" class="text-black hover:scale-[1.1] duration-200 cursor-pointer"
+                  :class="{ 'dark:text-white': isDark }" />
                <div>
                   <themeBtn></themeBtn>
                </div>
                <NuxtLink :to="gitLink" target="_blank">
-                  <Icon
-                     name="uil:github"
-                     size="2rem"
-                     class="text-black hover:scale-[1.1] duration-200"
-                     :class="{'dark:text-white':isDark}"
-                  />
+                  <Icon name="uil:github" size="2rem" class="text-black hover:scale-[1.1] duration-200"
+                     :class="{ 'dark:text-white': isDark }" />
                </NuxtLink>
             </div>
          </header>
@@ -54,7 +52,12 @@ useHead({
 
          <!-- search side -->
          <div class="relative w-1/4 h-auto border-l-2 border-gray-200 pt-8 px-2">
-            <input type="text" v-model="search" placeholder="Search..." class="w-full p-2 border border-gray-300" />
+            <!-- <input
+               type="text"
+               v-model="search"
+               placeholder="Search..."
+               :class="{'dark:text-black':isDark}"
+               class="w-full p-2 border border-gray-300"/>
 
             <div class="">
                <ContentList v-if="search !== ''" :path="`/articles`" fields="title,path" :query="searchParams">
@@ -64,13 +67,13 @@ useHead({
                         <NuxtLink :to="a.path"> <u> {{ a.title }} </u></NuxtLink>
                      </li>
                   </template>
-                  <template #not-found>
+<template #not-found>
                      <p class="text-gray-500 px-2 mt-2 text-center">Not Found</p>
                   </template>
-               </ContentList>
-            </div>
+</ContentList>
+</div> -->
 
-            <div class="mt-4 sticky top-4  z-10">
+            <div class="mb-4 sticky top-4  z-10">
                <Toc v-if="readState === 'reading'" :contents="tocData"></Toc>
             </div>
          </div>

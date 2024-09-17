@@ -8,14 +8,22 @@ export default {
             DEFAULT:{
                css:{
                   'code': {
-                  backgroundColor: '#1E242A',
-                  color: theme('colors.white'),
+                  backgroundColor: theme('colors.gray.200'),
+                  color: theme('colors.black'),
                   padding: '0.2em 0.4em',
                   borderRadius: '0.25rem',
                   fontWeight: '600',
                   },
                }
-            }
+            },
+            invert: {
+               css: {
+                  'code': {
+                  backgroundColor: `#1E242A`,
+                  color: theme('colors.white'),
+                  },
+               },
+            },
          })
       },
    },
