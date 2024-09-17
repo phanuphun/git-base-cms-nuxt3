@@ -23,17 +23,30 @@ const props = defineProps<{
 </script>
 
 <template>
-   <div class="w-full  flex flex-col border-2 border-gray-200">
-      <div class="text-md bg-gray-100 p-2 text-center border-b-2 border-gray-200"
-      :class="{'dark:bg-gray-800':isDark}">
+   <div class="w-full flex flex-col">
+      <div class="text-xl font-text font-bold">
+         <!-- <Icon name="uil:bookmark-full" size="25px" class="text-black -mb-2"
+         :class="{ 'dark:text-white': isDark }" /> -->
          Table of Contents
       </div>
-      <div class="px-4 py-2">
-         <li v-for="content in props.contents">
-            <a :href="`#${encodeURIComponent(content.id)}`" class="hover:text-blue-500 cursor-pointer">
+      <div class="px-4 py-1">
+         <div v-for="(content,index) in props.contents"
+         class="w-full"
+         :key="content.id">
+            <NuxtLink :to="`#${encodeURIComponent(content.id)}`">
+               <div
+               class="mt-1 px-3 py-1 rounded-md hover:bg-gray-200 cursor-pointer"
+               :class="{'dark:hover:bg-gray-700' : isDark}">
+                  <li>{{ content.text }}</li>
+               </div>
+            </NuxtLink>
+         </div>
+
+         <!-- <li v-for="content in props.contents">
+            <NuxtLink :to="`#${encodeURIComponent(content.id)}`" class="hover:text-blue-500 cursor-pointer">
                {{ content.text }}
-            </a>
-         </li>
+            </NuxtLink>
+         </li> -->
       </div>
    </div>
 </template>

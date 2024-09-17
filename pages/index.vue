@@ -5,7 +5,7 @@ import { useTheme } from '#imports';
 const isDark = useTheme()
 
 useHead({
-   title: "Home",
+   title: "Phanuphun-Blog",
    meta: [
       { name: "description", content: "Phanuphun.na-Blog" }
    ]
