@@ -2,7 +2,7 @@
 title: บันทึก Operating System Labotary
 date: '2024-02-06'
 description: โน๊ตนี้เป็นการจดบันทึกของวิชา Operating System Labotory
-tags: ['Linux' , 'Ubuntu']
+tags: ['linux' , 'ubuntu']
 thumbnail: 'https://lh3.googleusercontent.com/proxy/2sHU1m4WDt4vOY7Ahz34PUI8lT9VOllsfqQfhZohMOTpcoQn_emN3XgsfiYtaEI9ZJMtszIcoHiE53xWbVJ0iXkwQxlh'
 path: "os-lab-note"
 draft: true
@@ -37,7 +37,7 @@ wifi adapter ที่ใช้จะเป็น RT8188FTV จะใช้ส�
 2. เข้าไปตาม path `cd /etc/netplan`
 3. ตรวจดูชื่อไฟล์ `ls -l` ว่ามี  `00-installer-config.yaml` ไหม
 4. แก้ไขไฟล์ `00-installer-config.yaml` ด้วยคำสั่ง `nano 00-installer-config.yaml` แล้วคัดลอกไปวาง (ตั้งค่าตาม lab)
-```
+```shell
 network:
     version:2
     renderer: networkd
