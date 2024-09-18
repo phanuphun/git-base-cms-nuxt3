@@ -25,11 +25,11 @@ const props = defineProps<{
 <template>
    <div class="w-full flex flex-col">
       <div class="text-xl font-text font-bold">
-         <!-- <Icon name="uil:bookmark-full" size="25px" class="text-black -mb-2"
-         :class="{ 'dark:text-white': isDark }" /> -->
+         <Icon name="uil:bookmark-full" size="25px" class="text-black -mb-2"
+         :class="{ 'dark:text-white': isDark }" />
          Table of Contents
       </div>
-      <div class="px-4 py-1">
+      <div class="px-4 py-1 max-h-screen overflow-y-scroll">
          <div v-for="(content,index) in props.contents"
          class="w-full"
          :key="content.id">
@@ -41,12 +41,6 @@ const props = defineProps<{
                </div>
             </NuxtLink>
          </div>
-
-         <!-- <li v-for="content in props.contents">
-            <NuxtLink :to="`#${encodeURIComponent(content.id)}`" class="hover:text-blue-500 cursor-pointer">
-               {{ content.text }}
-            </NuxtLink>
-         </li> -->
       </div>
    </div>
 </template>

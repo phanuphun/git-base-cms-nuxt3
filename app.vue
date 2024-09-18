@@ -1,32 +1,45 @@
 <script setup lang="ts">
 import { useTheme } from './composables/useTheme';
 import themeBtn from './components/themeBtn.vue';
+import SearchModal from './components/searchModal.vue';
+
+
 
 const tocData = useTocData([])
 const readState = usePageState()
 
 const gitLink = 'https://github.com/phanuphun/phanuphun.na-blog'
-const search = ref('')
-
 const isDark = useTheme()
 
-const searchParams = computed(() => ({
-   where: [{ title: { $contains: search.value } }]
-}))
+const isModalOpen = ref<boolean>(false)
+function openSearch(){
+   isModalOpen.value = true
+}
+
+watch(isModalOpen, (newVal) => {
+  if (newVal) {
+    document.body.classList.add('overflow-hidden') // เมื่อ modal เปิด
+  } else {
+    document.body.classList.remove('overflow-hidden') // เมื่อ modal ปิด
+  }
+})
+
 
 useHead({
    bodyAttrs: {
-      class: `font-body`
+      class: 'font-body'
    },
    htmlAttrs: {
       class: 'dark font-body'
    }
 })
 
+
 </script>
 
 <template>
-   <div :class="{ 'dark:dark-t': isDark }" class="min-h-screen flex flex-col">
+   <SearchModal :is-open="isModalOpen" @is-close="(v)=>isModalOpen = v"></SearchModal>
+   <div :class="{ 'dark:dark-t': isDark  }" class="min-h-screen flex flex-col">
       <!-- header -->
       <div class="w-full flex">
          <header class="relative w-full px-4 py-3 flex flex-wrap justify-between items-center shadow-md shadow-gray-200"
@@ -35,7 +48,8 @@ useHead({
                <NuxtLink to="/">Phanuphun.na - Blog</NuxtLink>
             </div>
             <div class="w-auto flex flex-row gap-3">
-               <Icon name="uil:search" size="2rem" class="text-black hover:scale-[1.1] duration-200 cursor-pointer"
+               <Icon @click="openSearch()"
+                  name="uil:search" size="2rem" class="text-black hover:scale-[1.1] duration-200 cursor-pointer"
                   :class="{ 'dark:text-white': isDark }" />
                <div>
                   <themeBtn></themeBtn>
