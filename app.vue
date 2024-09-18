@@ -48,7 +48,7 @@ useHead({
                <NuxtLink to="/">Phanuphun.na - Blog</NuxtLink>
             </div>
             <div class="w-auto flex flex-row gap-3">
-               <Icon @click="openSearch()" mode="svg"
+               <Icon @click="openSearch()"
                   name="uil:search" size="2rem" class="text-black hover:scale-[1.1] duration-200 cursor-pointer"
                   :class="{ 'dark:text-white': isDark }" />
                <div>

@@ -15,4 +15,7 @@ export default defineNuxtConfig({
          theme: "monokai",
       },
    },
+   icon:{
+      mode:"svg"
+   }
 });
