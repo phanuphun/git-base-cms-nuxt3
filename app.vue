@@ -63,7 +63,7 @@ useHead({
       </div>
 
       <!-- body -->
-      <div class="w-full pl-4 mx-auto border-gray-200 flex-1 flex justify-between">
+      <div class="w-full mx-auto border-gray-200 flex-1 flex justify-between">
          <!-- side bar -->
          <div class="relative w-[330px] border-r-2 border-gray-200 pt-8">
             <div class="mb-4 sticky top-4 z-10">
