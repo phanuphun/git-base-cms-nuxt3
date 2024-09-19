@@ -34,9 +34,6 @@ usePageState()
                   hover:bg-gray-300 cursor-pointer scale-1 hover:scale-[1.01] duration-200"
                :class="{'dark:bg-gray-800 dark:hover:bg-gray-700':isDark}">
                <NuxtLink :to="`/articles/${a.path}`">
-                  <!-- <div class="h-60 w-full">
-                            <img :src="a.thumbnail" :alt="a.title" class="w-full h-full object-cover">
-                        </div> -->
                   <div class=" px-4">
                      <div class="text-2xl mt-2 font-semibold">
                         {{ a.title }}

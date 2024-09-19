@@ -8,12 +8,27 @@ export default {
             DEFAULT:{
                css:{
                   'code': {
-                  backgroundColor: theme('colors.gray.200'),
-                  color: theme('colors.black'),
-                  padding: '0.2em 0.4em',
-                  borderRadius: '0.25rem',
-                  fontWeight: '600',
+                     backgroundColor: theme('colors.gray.200'),
+                     color: theme('colors.black'),
+                     padding: '0.2em 0.4em',
+                     borderRadius: '0.25rem',
+                     fontWeight: '600',
                   },
+                  'h2':{
+                     fontSize: theme('fontSize.4xl'),
+                     fontWeight: '900'
+                  },
+                  'h3':{
+                     fontSize: theme('fontSize.2xl'),
+                     textDecoration:'underline'
+                  },
+                  'a':{
+                     textDecoration:'none'
+                  },
+                  'ul li::marker':{
+                     color:'black'
+                  }
+
                }
             },
             invert: {
@@ -22,6 +37,9 @@ export default {
                   backgroundColor: `#1E242A`,
                   color: theme('colors.white'),
                   },
+                  'ul li::marker':{
+                     color:'white'
+                  }
                },
             },
          })

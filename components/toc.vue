@@ -20,26 +20,60 @@ const props = defineProps<{
    contents?: Array<TocLink>
 }>()
 
+const scrolledToTop = ref<boolean>(false)
+const handleScroll = () => {
+   //เก็บตำแหน่งปัจจุบันที่เลื่อนอยู่
+   // 1. window.scrollY สำหรับเบราวน์เซอร์ใหม่
+   // 2. document.documentElement.scrollTop สำหรับเบราวน์เซอร์เก่า
+   const scrollPosition = window.scrollY || document.documentElement.scrollTop;
+
+   // ตำแหน่งที่ต้องการตรวจจับ `top-4` (4rem = 64px)
+   const targetPosition = 64;
+
+   // ถ้าตำแหน่งปัจจุบันมากกว่าตำแหน่งที่ตั้งไว้ให้ set ค่าใหม่
+   scrolledToTop.value = scrollPosition >= targetPosition;
+};
+
+onMounted(() => {
+   window.addEventListener('scroll', handleScroll);
+});
+
+onUnmounted(() => {
+   window.removeEventListener('scroll', handleScroll);
+});
 </script>
 
 <template>
-   <div class="w-full flex flex-col ">
-      <div class="text-2xl font-semibold font-text border-b-2 border-dashed pb-2 text-center">
-         <!-- <Icon name="uil:bookmark-full" size="25px" class="text-black -mb-2"
-         :class="{ 'dark:text-white': isDark }" /> -->
-            Table of Contents
+   <div class="w-full flex flex-col"
+      :class="{ 'max-h-[calc(100vh-3rem)] pb-5': !scrolledToTop, 'max-h-screen pb-5': scrolledToTop }">
+      <div class="text-2xl font-semibold font-text pb-2 text-center">
+         เนื้อหา
       </div>
-      <div class="py-2 max-h-screen overflow-y-scroll px-2">
-         <div v-for="(content,index) in props.contents"
-         class="w-full"
-         :key="content.id">
-            <NuxtLink :to="`#${encodeURIComponent(content.id)}`">
-               <div
-               class="mt-1 px-8 py-2 rounded-md hover:bg-gray-200 cursor-pointer"
-               :class="{'dark:hover:bg-gray-700' : isDark}">
-               {{index+1}} - {{ content.text }}
-               </div>
-            </NuxtLink>
+      <hr class="text-xl">
+      <div class="pt-2 max-h-screen overflow-y-scroll px-2">
+         <div class="w-full">
+            <div class="mt-1 py-1 pl-4 rounded-md">
+               <ul class="list-outside">
+                  <li v-for="(content, index) in props.contents" :key="content.id"
+                     class="mt-2 list-none text-md w-full  ">
+                     <NuxtLink :to="`#${encodeURIComponent(content.id)}`">
+                        <span class="text-lg font-semibold hover:text-blue-500">
+                           {{ content.text }}
+                        </span>
+                     </NuxtLink>
+                     <ul class="pl-8 list-outside" v-if="content.children">
+                        <li v-for="(subContent, index) in content.children" :key="subContent.id"
+                           class=" list-disc hover:text-blue-500 text-md w-full">
+                           <NuxtLink :to="`#${encodeURIComponent(subContent.id)}`">
+                              <span class="">
+                                 {{ subContent.text }}
+                              </span>
+                           </NuxtLink>
+                        </li>
+                     </ul>
+                  </li>
+               </ul>
+            </div>
          </div>
       </div>
    </div>

@@ -10,6 +10,7 @@
       @apply bg-gray-900 text-white
    }
 }
+
 html {
    scroll-behavior: smooth;
 }
@@ -34,6 +35,8 @@ html {
 ::-webkit-scrollbar-thumb {
    background: #94a3b8;
    border-radius: 5px;
+   transition: width 2s;
+
 }
 
 /* Handle on hover */
