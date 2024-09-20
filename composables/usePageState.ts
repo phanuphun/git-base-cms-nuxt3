@@ -18,3 +18,5 @@ export const usePageState = () => {
 
   return readState
 }
+
+export const useSideBarOpen = () => {}

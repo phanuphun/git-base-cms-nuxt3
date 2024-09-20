@@ -7,17 +7,16 @@ const formatDate = (dateString: string): string => {
 usePageState() // update state
 const isDark = useTheme()
 
-const { slug: path } = useRoute().params // get path doc
+const { path } = useRoute().params
 
 // get toc data from docs
 const { data } = await useAsyncData('home', () => queryContent(`/articles/${path}`).findOne())
 useTocData(data.value?.body?.toc?.links!) // update toc
 
-
 </script>
 
 <template>
-   <article class="bg-white rounded-2xl" :class="{ 'dark:dark-t': isDark }">
+   <div class="bg-white " :class="{ 'dark:dark-t': isDark }">
       <ContentDoc :path="`/articles/${path}`">
          <template #default="{ doc }">
             <header>
@@ -28,18 +27,21 @@ useTocData(data.value?.body?.toc?.links!) // update toc
                   </div>
                </div>
             </header>
-            <div class="mt-4 w-full">
-               <ContentRenderer class="prose max-w-full" :class="{ 'dark:prose-invert text-white': isDark }"
-                  :value="doc" />
+            <div class="mt-4 flex flex-col">
+               <ContentRenderer
+               class="max-w-full"
+               :class="{ 'dark:prose-invert text-white': isDark }"
+               :value="doc"
+               />
             </div>
          </template>
          <template #not-found>
             <div class="w-full flex justify-center items-center">
-               <p class="text-gray-500 px-2 mt-2">ไม่มีบทความนี้ในระบบหรือคุณไม่มีสิทธิ์เข้าถึง</p>
+               <p class="text-gray-500 px-2 mt-2">No articles </p>
             </div>
          </template>
       </ContentDoc>
-   </article>
+   </div>
 </template>
 
-<style scoped></style>
+

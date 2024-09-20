@@ -26,7 +26,7 @@ usePageState()
 </script>
 
 <template>
-   <div>
+   <div class="w-auto">
       <ContentList path="/articles" fields="title,date,thumbnail,tags" :query="query">
          <template #default="{ list }">
             <div v-for="a in list" :key="a._path"
@@ -52,7 +52,6 @@ usePageState()
             </div>
          </template>
          <template #not-found>
-
          </template>
       </ContentList>
    </div>

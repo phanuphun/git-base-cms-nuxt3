@@ -44,7 +44,7 @@ onUnmounted(() => {
 </script>
 
 <template>
-   <div class="w-full flex flex-col"
+   <div class="w-full flex flex-col pt-3"
       :class="{ 'max-h-[calc(100vh-3rem)] pb-5': !scrolledToTop, 'max-h-screen pb-5': scrolledToTop }">
       <div class="text-2xl font-semibold font-text pb-2 text-center">
          เนื้อหา

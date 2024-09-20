@@ -9,6 +9,10 @@
    .dark-t {
       @apply bg-gray-900 text-white
    }
+
+   .f-icon {
+      @apply
+   }
 }
 
 html {

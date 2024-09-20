@@ -10,10 +10,12 @@ export default defineNuxtConfig({
       "/": { prerender: true },
    },
    content: {
-      documentDriven: false, // deploy error will trigger if u turn on
       highlight: {
          theme: "monokai",
       },
+      markdown:{
+         rehypePlugins: []
+      }
    },
    icon:{
       mode:"svg"
