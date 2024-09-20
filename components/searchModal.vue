@@ -51,7 +51,7 @@ const highlightText = (text: string) => {
 <template>
    <div id="modal" @click.self="closeModal()"
       class="fixed hidden inset-0 justify-center items-center bg-black bg-opacity-90 z-50">
-      <div @click.self="closeModal()" class="w-full max-w-3xl h-screen py-6 ">
+      <div @click.self="closeModal()" class="w-full max-w-3xl h-screen p-6 ">
          <!-- Modal Container -->
          <div class="w-full h-auto max-h-full rounded-md bg-white p-6 shadow-lg border-2 border-white flex flex-col"
             :class="{ 'dark:dark-t': isDark }">

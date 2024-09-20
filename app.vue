@@ -119,7 +119,7 @@ watch(readState, () => {
             </div>
          </div>
          <!-- main -->
-         <div id="mainContain" class="flex-1 py-8 max-w-full px-8 relative  ">
+         <div id="mainContain" class="flex-1 py-8 max-w-full pl-4 px-8 relative  ">
             <NuxtPage />
          </div>
       </div>

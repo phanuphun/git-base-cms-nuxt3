@@ -27,11 +27,11 @@ usePageState()
 
 <template>
    <div class="w-auto">
-      <ContentList path="/articles" fields="title,date,thumbnail,tags" :query="query">
+      <ContentList path="/articles" fields="title,date,thumbnail,tags,tag" :query="query">
          <template #default="{ list }">
             <div v-for="a in list" :key="a._path"
                class="blog-card bg-gray-100 overflow-hidden mb-4 pb-4 rounded-md
-                  hover:bg-gray-300 cursor-pointer scale-1 hover:scale-[1.01] duration-200"
+                  hover:bg-gray-300 cursor-pointer scale-1 duration-200"
                :class="{'dark:bg-gray-800 dark:hover:bg-gray-700':isDark}">
                <NuxtLink :to="`/articles/${a.path}`">
                   <div class=" px-4">
