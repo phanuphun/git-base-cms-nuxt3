@@ -325,9 +325,9 @@ Table of content(TOC) เป็นการทำสารบัญจากแ�
 ## อ้างอิง
 ::refBox
 #note-text
-- <https://content.nuxt.com/get-started/installation>
-- <https://github.com/nuxt/content/discussions/1343>
-- <https://nuxt.com/docs/getting-started/introduction>
-- <https://tailwindcss.com/docs/configuration>
-- <https://github.com/tailwindlabs/tailwindcss-typography#customizing-the-css>
+- https://content.nuxt.com/get-started/installation
+- https://github.com/nuxt/content/discussions/1343
+- https://nuxt.com/docs/getting-started/introduction
+- https://tailwindcss.com/docs/configuration
+- https://github.com/tailwindlabs/tailwindcss-typography#customizing-the-css
 ::

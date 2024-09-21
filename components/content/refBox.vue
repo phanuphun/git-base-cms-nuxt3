@@ -1,9 +1,10 @@
 <template>
-   <div class="px-4 w-full border-2 border-dashed rounded-md " :class="{'dark:darl-t':isDark}">
-       <p class="text-lg ">
-           <slot name="note-header"></slot>
-       </p>
-       <slot name="note-text"></slot>
+   <div
+      class="px-4 w-full border-2 border-dashed rounded-md "
+      :class="{'dark:darl-t':isDark}"
+      style="word-break: break-all;"
+   >
+      <slot name="note-text"></slot>
    </div>
 </template>
 
