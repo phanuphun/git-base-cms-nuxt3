@@ -9,7 +9,7 @@ export default {
                css:{
                   'code': {
                      backgroundColor: theme('colors.gray.200'),
-                     color: theme('colors.black'),
+                     color: theme('colors.pink.500'),
                      padding: '0.2em 0.4em',
                      borderRadius: '0.25rem',
                      fontWeight: '600',

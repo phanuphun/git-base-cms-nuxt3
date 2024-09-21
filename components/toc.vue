@@ -42,6 +42,14 @@ onMounted(() => {
 onUnmounted(() => {
    window.removeEventListener('scroll', handleScroll);
 });
+
+const isScreenXL = useScreenSize()
+
+function sideBarBehavior(){
+   if(isScreenXL.value === false){
+      isSideBarOpen.value = false
+   }
+}
 </script>
 
 <template>
@@ -57,7 +65,7 @@ onUnmounted(() => {
                <ul class="list-outside">
                   <li v-for="(content, index) in props.contents" :key="content.id"
                      class="mt-2 list-none text-md w-full  ">
-                     <NuxtLink :to="`#${encodeURIComponent(content.id)}`" @click="isSideBarOpen = false">
+                     <NuxtLink :to="`#${encodeURIComponent(content.id)}`" @click="sideBarBehavior()">
                         <span class="text-lg font-semibold hover:text-blue-500">
                            {{ content.text }}
                         </span>
@@ -65,7 +73,7 @@ onUnmounted(() => {
                      <ul class="pl-8 list-outside" v-if="content.children">
                         <li v-for="(subContent, index) in content.children" :key="subContent.id"
                            class=" list-disc hover:text-blue-500 text-md w-full">
-                           <NuxtLink :to="`#${encodeURIComponent(subContent.id)}`" @click="isSideBarOpen = false">
+                           <NuxtLink :to="`#${encodeURIComponent(subContent.id)}`" @click="sideBarBehavior()">
                               <span class="">
                                  {{ subContent.text }}
                               </span>

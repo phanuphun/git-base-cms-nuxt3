@@ -2,6 +2,7 @@
 import { useTheme } from './composables/useTheme';
 import themeBtn from './components/themeBtn.vue';
 import SearchModal from './components/searchModal.vue';
+import { useScreenSize } from './composables/usePageState';
 
 const readState = usePageState()
 
@@ -32,11 +33,12 @@ useHead({
 
 
 const isSideBarOpen = useSideBarOpen()
-
 </script>
 
 <template>
-   <SearchModal :is-open="isModalOpen" @is-close="(v) => isModalOpen = v"></SearchModal>
+   <NuxtLoadingIndicator />
+   <SearchModal :is-open="isModalOpen" @is-close="(v) => isModalOpen = v" />
+
    <div :class="{ 'dark:dark-t': isDark }" class="min-h-screen flex flex-col w-auto">
       <!-- header -->
       <div class="w-full flex z-90" :class="{ 'dark:dark': isDark }">
@@ -66,7 +68,6 @@ const isSideBarOpen = useSideBarOpen()
          <div id="mainContain" class="flex-1 py-8 max-w-full pl-14 pr-8 xl:px-16 flex justify-end">
             <div class="w-full transition-all duration-200"
             :class="{ 'xl:w-[calc(100%-300px)]': isSideBarOpen && readState ==='reading' }">
-               <NuxtLoadingIndicator />
                <NuxtPage />
             </div>
          </div>

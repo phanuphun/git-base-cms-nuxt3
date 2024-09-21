@@ -4,7 +4,7 @@
       :class="{'dark:darl-t':isDark}"
       style="word-break: break-all;"
    >
-      <slot name="note-text"></slot>
+      <slot></slot>
    </div>
 </template>
 
