@@ -45,7 +45,6 @@ const isSideBarOpen = useSideBarOpen()
             <div class="text-xl font-logo font-semibold ">
                <NuxtLink to="/">Phanuphun.na - Blog </NuxtLink>
             </div>
-            {{ isSideBarOpen }} {{ readState }}
             <div class="w-auto flex flex-row gap-3">
                   <IconF @click="openSearch()"  name="uil:search"/>
                <div>
