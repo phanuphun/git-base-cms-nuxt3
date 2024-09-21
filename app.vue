@@ -66,6 +66,7 @@ const isSideBarOpen = useSideBarOpen()
          <div id="mainContain" class="flex-1 py-8 max-w-full pl-14 pr-8 xl:px-16 flex justify-end">
             <div class="w-full transition-all duration-200"
             :class="{ 'xl:w-[calc(100%-300px)]': isSideBarOpen && readState ==='reading' }">
+               <NuxtLoadingIndicator />
                <NuxtPage />
             </div>
          </div>
