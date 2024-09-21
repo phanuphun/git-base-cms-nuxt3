@@ -21,12 +21,7 @@ function changeMode(){
 <template>
    <div :class="{'dark:dark-t':isDark}">
       <button @click="changeMode" class="rounded-md">
-         <Icon
-            :name="isDark ?'uil:moon' : 'uil:sun'"
-            size="2rem"
-            class="text-black hover:scale-[1.1] duration-200"
-            :class="{'dark:text-white':isDark}"
-         />
+         <IconF :name="isDark ?'uil:moon' : 'uil:sun'" />
       </button>
    </div>
 </template>

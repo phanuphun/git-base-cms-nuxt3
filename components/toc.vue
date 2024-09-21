@@ -1,6 +1,7 @@
 <script setup lang="ts">
 
 const isDark = useTheme()
+const isSideBarOpen = useSideBarOpen()
 
 interface TocLink {
    id: string;
@@ -56,7 +57,7 @@ onUnmounted(() => {
                <ul class="list-outside">
                   <li v-for="(content, index) in props.contents" :key="content.id"
                      class="mt-2 list-none text-md w-full  ">
-                     <NuxtLink :to="`#${encodeURIComponent(content.id)}`">
+                     <NuxtLink :to="`#${encodeURIComponent(content.id)}`" @click="isSideBarOpen = false">
                         <span class="text-lg font-semibold hover:text-blue-500">
                            {{ content.text }}
                         </span>
@@ -64,7 +65,7 @@ onUnmounted(() => {
                      <ul class="pl-8 list-outside" v-if="content.children">
                         <li v-for="(subContent, index) in content.children" :key="subContent.id"
                            class=" list-disc hover:text-blue-500 text-md w-full">
-                           <NuxtLink :to="`#${encodeURIComponent(subContent.id)}`">
+                           <NuxtLink :to="`#${encodeURIComponent(subContent.id)}`" @click="isSideBarOpen = false">
                               <span class="">
                                  {{ subContent.text }}
                               </span>

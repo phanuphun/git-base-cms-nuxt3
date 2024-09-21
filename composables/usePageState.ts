@@ -19,4 +19,9 @@ export const usePageState = () => {
   return readState
 }
 
-export const useSideBarOpen = () => {}
+export const useSideBarOpen = () => {
+   const useSideBarOpen = useState<boolean>('value',()=>{
+      return false
+   })
+   return useSideBarOpen
+}
