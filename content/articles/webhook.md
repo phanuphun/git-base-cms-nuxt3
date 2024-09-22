@@ -1,16 +1,20 @@
 ---
-title: webhook คืออะไร?
+title: webhook
 date: '2024-09-16'
-description: บันทึกความเข้าใจเกี่ยวกับ webhook , ลองใช้ github webhook ในการทดลอง
-tags: ['webhook' ]
+description: ''
+tag: Note
+tags:
+   - Webhook
+   - Basic Concept
+   - Github
 thumbnail: ''
-path: "how-webhook-work"
+path: 'webhook'
 draft: true
 ---
 
-### Webhook คือ
+### Webhook
 
-### ตัวอย่างการใช้งาน
+### ทดลองใช้ webhook
 ตัวอย่างการใช้งาน webhook ในบทความนี้จะใช้ webhook ของ Github ในการตรวจจับ Event ต่างๆที่เกิดขึ้นใน repository ของเรา เช่น การpush หรือการ pull
 1. สร้าง server ของเราขึ้นมาแล้วเขียน api ขึ้นมาหนึ่งเส้นชื่อว่า `/github-listener` เพื่อกำหนดจุด End point ของ webhook ดังนี้
 ```js

@@ -6,8 +6,17 @@
 @tailwind utilities;
 
 @layer utilities {
+   .light-t {
+      @apply bg-gray-100 text-black border-gray-400
+   }
    .dark-t {
       @apply bg-gray-900 text-white border-white
+   }
+   .card-light-t{
+      @apply bg-gray-200 hover:bg-gray-300 text-black border-gray-400 cursor-pointer transition-all duration-200
+   }
+   .card-dark-t{
+      @apply bg-gray-800 hover:bg-gray-700 text-white border-white cursor-pointer  transition-all duration-200
    }
 }
 

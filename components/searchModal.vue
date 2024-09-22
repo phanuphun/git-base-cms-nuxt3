@@ -12,15 +12,26 @@ const isDark = useTheme()
 const search = ref<string>('')
 
 const searchParams = computed(() => ({
-   where: [
-      {
-         $or: [
-            { title: { $regex: new RegExp(search.value, 'i') } },
-            { description: { $regex: new RegExp(search.value, 'i') } }
-         ]
-      }
+   $or: [
+      { title: { $regex: new RegExp(search.value, 'i') } },
+      { description: { $regex: new RegExp(search.value, 'i') } }
    ]
 }))
+
+const {data , refresh} = getData()
+
+function getData() {
+   return useAsyncData('searchData', () => queryContent('/article')
+      .where(searchParams.value)
+      .find()
+   )
+}
+
+watch(search ,()=>{
+   console.log(data.value);
+   refresh()
+})
+
 
 watch(() => props.isOpen, (newVal) => {
    const modal = document.getElementById("modal")
@@ -34,11 +45,8 @@ watch(() => props.isOpen, (newVal) => {
 })
 
 function closeModal() {
+   search.value = ''
    emit('isClose', false)
-}
-
-const formatDate = (dateString: string): string => {
-   return useDateConverter(dateString);
 }
 
 const highlightText = (text: string) => {
@@ -64,45 +72,19 @@ const highlightText = (text: string) => {
             </div>
 
             <!-- body -->
-            <div class="w-full h-auto max-h-full  overflow-auto mt-4">
+            <div class="w-full h-auto max-h-full overflow-auto mt-4">
                <div class="h-auto overflow-auto">
-
-                  <ContentList :path="`/articles/`" fields="title,date,thumbnail,tags" :query="searchParams">
-                     <template #default="{ list }">
-                        <div v-for="(a, index) in list" :key="index" id="container-list"
-                           class="w-full my-2 first:mt-0 last:mb-0">
-                           <NuxtLink :to="'/articles/' + a.path" @click="closeModal()">
-                              <div
-                                 class="relative p-2 rounded-md cursor-pointer flex flex-row bg-gray-100 hover:bg-gray-300"
-                                 :class="{ 'dark:bg-gray-800 dark:hover:bg-gray-700 group': isDark }">
-                                 <div class="pr-2 flex justify-center items-start pt-2">
-                                    <Icon name="uil:file-blank" size="2rem" />
-                                 </div>
-                                 <div class="w-full">
-                                    <div v-html="highlightText(a.title!)"></div>
-                                    <div class="w-full line-clamp-4 text-gray-500"
-                                       v-html="highlightText(a.description!)">
-                                    </div>
-                                    <span class="text-gray-500 mr-2">
-                                       {{ formatDate(a.date) }}
-                                    </span>
-                                 </div>
-                                 <div
-                                    class="absolute bottom-0 right-0 pr-2 justify-center items-center hidden group-hover:flex">
-                                    <Icon name="uil:enter" size="2rem" />
-                                 </div>
-                              </div>
-                           </NuxtLink>
-                        </div>
-                     </template>
-                     <template #not-found>
-                        <div class="flex h-full justify-center items-center mt-4">
-                           <p class="text-gray-300">
-                              No articles
+                  <div class="flex flex-col" v-for="a in data" :key="a._id">
+                     <NuxtLink :to="a._path" @click="closeModal()">
+                        <div class="w-full py-4 px-4 mt-2 text-xl card-light-t rounded-md"
+                        :class="{'dark:card-dark-t':isDark}">
+                           <div v-html="highlightText(a.title!)"></div>
+                           <p class="text-gray-400 text-sm">
+                              {{useDateConverter(a.date) }}
                            </p>
                         </div>
-                     </template>
-                  </ContentList>
+                     </NuxtLink>
+                  </div>
                </div>
             </div>
          </div>
