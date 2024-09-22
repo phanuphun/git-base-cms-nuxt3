@@ -1,16 +1,16 @@
 ---
 title: Nuxt Content
 date: 2024/09/12
-description: ''
+description: 'การใช้งาน Nuxt Content ในการทำเว็บบล็อค'
 tag: Note
 tags:
   - Nuxt
-  - Nuxt Content
+  - Nuxt Module
   - Vue
   - CMS
-img: ''
+img: /img/nuxt-content/cover.png
 path: nuxt-content
-draft: true
+draft: false
 ---
 
 ---
@@ -51,7 +51,7 @@ Nuxt Content คือ Module ที่ใน Framework Nuxt.js ที่ช่�
 title: ทำเว็บบล็อคด้วย Nuxt Content
 description: ....
 date: '2024/09/12'
-tags: ['nuxt' , 'nuxt content' ,'vue']
+tags: ['nuxt' , 'nuxt content' ,'vue' ]
 img:
 path: "nuxt-content"
 ---

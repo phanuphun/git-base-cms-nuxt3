@@ -19,7 +19,7 @@ const formatDate = (dateString: string): string => {
 
 usePageState()
 
-const limit = ref(2)
+const limit = ref(10)
 const skip = ref(0)
 const length = getDataLength()
 
@@ -37,7 +37,7 @@ const { data } = getData()
 
 function getData() {
    return useAsyncData('list', () => queryContent('/article')
-      .sort({ date: -1 })
+      .sort({ date: 1 })
       .limit(limit.value)
       .skip(skip.value)
       .find())
@@ -53,19 +53,33 @@ function getDataLength(){
 <template>
    <div class="w-auto">
       <div class="flex flex-col justify-center items-center gap-2">
-
-         <div v-for="a in data" :key="a._id" class="w-full rounded-md card-light-t"
+         <div v-for="a in data" :key="a._id" class="w-full h-full rounded-md card-light-t"
             :class="{ 'dark:dark-t dark:card-dark-t': isDark }">
             <NuxtLink :to="a._path">
-               <div class="p-5 ">
-                  <p class="text-2xl">
-                     {{ a.title }}
-                  </p>
-                  <p class="text-md text-gray-400">
-                     {{ useDateConverter(a.date) }}
-                  </p>
-                  <div class="mt-2 flex flex-row gap-2" >
-                     <Tag v-for="tag in a.tags">{{ tag }}</Tag>
+               <div class="p-3 flex flex-col sm:flex-row  ">
+                  <div class="w-auto">
+                     <div class="w-full sm:w-[300px] rounded-md">
+                        <img
+                        :src="a.img ?a.img :'/img/default/no-cover.png'"
+                        alt="article cover"
+                        class="w-full sm:w-[300px] rounded-md object-fill">
+                     </div>
+                  </div>
+                  <div class="w-full sm:px-4 flex justify-start items-start pb-2 mt-4 am:mt-0">
+                     <div>
+                        <p class="text-2xl">
+                           {{ a.title }}
+                        </p>
+                        <p class="text-md text-gray-400">
+                           {{ useDateConverter(a.date) }}
+                        </p>
+                        <p class="text-xl mt-2">
+                           {{a.description}}
+                        </p>
+                        <div class="mt-2 flex flex-wrap gap-2" >
+                           <Tag v-for="tag in a.tags">{{ tag }}</Tag>
+                        </div>
+                     </div>
                   </div>
                </div>
             </NuxtLink>
