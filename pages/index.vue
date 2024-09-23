@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script setup lang="ts" >
 import { useDateConverter } from '~/composables/useDateConverter'
 import { useTheme } from '#imports';
 import PersobalBox from '~/components/persobalBox.vue';
@@ -38,6 +38,7 @@ const { data } = getData()
 
 function getData() {
    return useAsyncData('list', () => queryContent('/article')
+      .where({ draft: false })
       .sort({ date: 1})
       .limit(limit.value)
       .skip(skip.value)
@@ -49,23 +50,14 @@ function getDataLength(){
    return data.value?.length
 }
 
+
 </script>
 
 <template>
    <div class="w-auto flex flex-col">
-      <div>
-         <h1>ตัวอย่างกราฟ Mermaid</h1>
-         <div class="mermaid">
-            graph TD;
-            A-->B;
-            A-->C;
-            B-->D;
-            C-->D;
-         </div>
-      </div>
-      <PersobalBox></PersobalBox>
+      <!-- <PersobalBox></PersobalBox>
       <p class="text-left text-3xl pl-2">บทความ ({{ length }})</p>
-      <Divider></Divider>
+      <Divider></Divider> -->
       <div class="flex flex-col justify-center items-center gap-2 mt-4">
          <div v-for="a in data" :key="a._id" class="w-full h-full rounded-md card-light-t"
             :class="{ 'dark:dark-t dark:card-dark-t': isDark }">

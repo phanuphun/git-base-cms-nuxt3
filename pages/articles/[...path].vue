@@ -17,6 +17,7 @@ useTocData(data.value?.body?.toc?.links!) // update toc
 
 <template>
    <div class="bg-white mt-8" :class="{ 'dark:dark-t': isDark }">
+
       <ContentDoc :path="`/articles/${path}`">
          <template #default="{ doc }">
             <header>

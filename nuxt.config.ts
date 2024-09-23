@@ -8,6 +8,7 @@ export default defineNuxtConfig({
       "@nuxt/image",
       "@nuxt/icon",
    ],
+
    css: ["~/assets/css/global.css"],
    routeRules: {
       "/": { prerender: true },
@@ -20,5 +21,5 @@ export default defineNuxtConfig({
    },
    icon: {
       mode: "svg",
-   },
+   }
 });

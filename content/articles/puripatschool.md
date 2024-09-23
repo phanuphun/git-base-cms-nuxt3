@@ -10,7 +10,7 @@ tags:
   - Node.js
 img: /img/puripat-school/cover.png
 path: puripatschool
-draft: false
+draft: true
 ---
 
 ---
