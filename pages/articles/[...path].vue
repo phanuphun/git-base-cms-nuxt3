@@ -16,7 +16,7 @@ useTocData(data.value?.body?.toc?.links!) // update toc
 </script>
 
 <template>
-   <div class="bg-white " :class="{ 'dark:dark-t': isDark }">
+   <div class="bg-white mt-8" :class="{ 'dark:dark-t': isDark }">
       <ContentDoc :path="`/articles/${path}`">
          <template #default="{ doc }">
             <header>
@@ -29,7 +29,7 @@ useTocData(data.value?.body?.toc?.links!) // update toc
             </header>
             <div class="mt-4 flex flex-col">
                <ContentRenderer
-               class="max-w-full prose prose-lg md:prose-lg"
+               class="max-w-full prose prose-xl md:prose-lg break-words"
                :class="{ 'dark:prose-invert text-white': isDark }"
                :value="doc"
                >

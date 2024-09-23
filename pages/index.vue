@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { useDateConverter } from '~/composables/useDateConverter'
 import { useTheme } from '#imports';
+import PersobalBox from '~/components/persobalBox.vue';
 
 const isDark = useTheme()
 
@@ -37,7 +38,7 @@ const { data } = getData()
 
 function getData() {
    return useAsyncData('list', () => queryContent('/article')
-      .sort({ date: -1 })
+      .sort({ date: 1})
       .limit(limit.value)
       .skip(skip.value)
       .find())
@@ -51,8 +52,21 @@ function getDataLength(){
 </script>
 
 <template>
-   <div class="w-auto">
-      <div class="flex flex-col justify-center items-center gap-2">
+   <div class="w-auto flex flex-col">
+      <div>
+         <h1>ตัวอย่างกราฟ Mermaid</h1>
+         <div class="mermaid">
+            graph TD;
+            A-->B;
+            A-->C;
+            B-->D;
+            C-->D;
+         </div>
+      </div>
+      <PersobalBox></PersobalBox>
+      <p class="text-left text-3xl pl-2">บทความ ({{ length }})</p>
+      <Divider></Divider>
+      <div class="flex flex-col justify-center items-center gap-2 mt-4">
          <div v-for="a in data" :key="a._id" class="w-full h-full rounded-md card-light-t"
             :class="{ 'dark:dark-t dark:card-dark-t': isDark }">
             <NuxtLink :to="a._path">
@@ -62,7 +76,8 @@ function getDataLength(){
                         <img
                         :src="a.img ?a.img :'/img/default/no-cover.png'"
                         alt="article cover"
-                        class="w-full sm:w-[300px] rounded-md object-fill">
+                        class="w-full sm:w-[300px] rounded-md object-fill grayscale hover:grayscale-0 duration-200"
+                        :class="{'dark:grayscale-0':isDark}">
                      </div>
                   </div>
                   <div class="w-full sm:px-4 flex justify-start items-start pb-2 mt-4 am:mt-0">

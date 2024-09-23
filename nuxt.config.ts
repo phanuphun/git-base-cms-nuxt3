@@ -16,9 +16,7 @@ export default defineNuxtConfig({
       highlight: {
          theme: "monokai",
       },
-      markdown: {
-
-      },
+      markdown: {},
    },
    icon: {
       mode: "svg",

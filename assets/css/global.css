@@ -6,6 +6,8 @@
 @tailwind utilities;
 
 @layer utilities {
+
+
    .light-t {
       @apply bg-gray-100 text-black border-gray-400
    }
