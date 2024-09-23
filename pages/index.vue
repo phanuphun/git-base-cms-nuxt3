@@ -39,7 +39,7 @@ const { data } = getData()
 function getData() {
    return useAsyncData('list', () => queryContent('/article')
       .where({ draft: false })
-      .sort({ date: 1})
+      .sort({ date: -1})
       .limit(limit.value)
       .skip(skip.value)
       .find())

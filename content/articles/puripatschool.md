@@ -10,7 +10,7 @@ tags:
   - Node.js
 img: /img/puripat-school/cover.png
 path: puripatschool
-draft: true
+draft: false
 ---
 
 ---
@@ -29,3 +29,5 @@ draft: true
 
 
 ### ภาพรวมระบบ
+
+![01](/img/puripat-school/01.jpg)
