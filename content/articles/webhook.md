@@ -36,6 +36,7 @@ app.post('/github-listener',(req,res)=>{
 - SSL verification : ปิดเอาไว้เนื่องจาก public url ของเราไม่ใช่ https
 - ส่วน event ที่เราต้องการจะให้มัน trigger ส่งข้อมูลมาที่เรา ให้เลือกทุกอย่างเพื่อง่ายต่อการทดสอบ
 ::ImageBox{src="img/how-webhook-work/02.png"}
+![test](/img/how-webhook-work/02.png)
 
 4. เมื่อเตรียมทุกอย่างเสร็จแล้วก็เริ่มทดสอบด้วยการ push บางอย่างขึ้นไปบน repository ของเรา จะเห็นว่าทาง Github Server ได้ส่งข้อมูลมาให้กับเรามี Event ชื่อว่า `push` พร้อมกับรายละเอียดต่างๆที่ผมนำมาเก็บเอาไว้ที่ตัวแปร Payload ในกรณีที่เราเปลี่ยนชื่อ repo ของเราตัว webhook ก็จะทำงานเช่นกันเนื่องจากเราเลือก Event ทั้งหมด
 ::ImageBox{src="/img/how-webhook-work/03.png"}
