@@ -30,7 +30,7 @@ useTocData(data.value?.body?.toc?.links!) // update toc
             </header>
             <div class="mt-4 flex flex-col">
                <ContentRenderer
-               class="max-w-full prose prose-xl md:prose-lg break-words"
+               class="max-w-full prose prose-xl xl:prose-lg break-words"
                :class="{ 'dark:prose-invert text-white': isDark }"
                :value="doc"
                >

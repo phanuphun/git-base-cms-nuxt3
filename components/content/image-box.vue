@@ -5,7 +5,7 @@ defineProps({
 </script>
 
 <template>
-   <div class="-mt-4">
-      <img :src="src" alt="img" class="rounded-lg w-full  lg:w-2/3 xl:w-3/4">
+   <div class="-mt-4 flex w-full justify-start items-center">
+      <img :src="src" alt="img" class="rounded-lg w-full  ">
    </div>
 </template>
