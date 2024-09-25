@@ -13,10 +13,12 @@
     "@nuxt/image": "^1.8.0",
     "@nuxtjs/tailwindcss": "^6.12.1",
     "@tailwindcss/typography": "^0.5.15",
+    "mermaid": "^11.2.1",
     "nuxt": "^3.13.0"
   },
   "devDependencies": {
     "@tailwindcss/line-clamp": "^0.4.4",
+    "@types/mermaid": "^9.2.0",
     "autoprefixer": "^10.4.20",
     "postcss": "^8.4.45"
   }

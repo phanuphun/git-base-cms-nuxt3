@@ -2,6 +2,7 @@
 export default {
    darkMode: 'class',
    content: ['./src/**/*.{html,js,ts,vue}'],
+   purge: false,
    theme: {
       extend: {
          typography: (theme) => ({

@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import Mermaid from '~/components/content/mermaid.vue';
 import { useDateConverter } from '~/composables/useDateConverter'
 const formatDate = (dateString: string): string => {
    return useDateConverter(dateString);
@@ -12,12 +13,10 @@ const { path } = useRoute().params
 // get toc data from docs
 const { data } = await useAsyncData('home', () => queryContent(`/articles/${path}`).findOne())
 useTocData(data.value?.body?.toc?.links!) // update toc
-
 </script>
 
 <template>
    <div class="bg-white mt-8" :class="{ 'dark:dark-t': isDark }">
-
       <ContentDoc :path="`/articles/${path}`">
          <template #default="{ doc }">
             <header>
@@ -29,11 +28,8 @@ useTocData(data.value?.body?.toc?.links!) // update toc
                </div>
             </header>
             <div class="mt-4 flex flex-col">
-               <ContentRenderer
-               class="max-w-full prose prose-xl xl:prose-lg break-words"
-               :class="{ 'dark:prose-invert text-white': isDark }"
-               :value="doc"
-               >
+               <ContentRenderer class="max-w-full prose prose-xl xl:prose-lg break-words"
+                  :class="{ 'dark:prose-invert text-white': isDark }" :value="doc">
                </ContentRenderer>
             </div>
          </template>
@@ -45,5 +41,3 @@ useTocData(data.value?.body?.toc?.links!) // update toc
       </ContentDoc>
    </div>
 </template>
-
-
