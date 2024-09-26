@@ -68,13 +68,13 @@ function getDataLength(){
                         <img
                         :src="a.img ?a.img :'/img/default/no-cover.png'"
                         alt="article cover"
-                        class="w-full sm:w-[300px] rounded-md object-fill grayscale hover:grayscale-0 duration-200"
+                        class="w-full sm:w-[300px] rounded-md object-fill  duration-200"
                         :class="{'dark:grayscale-0':isDark}">
                      </div>
                   </div>
                   <div class="w-full sm:px-4 flex justify-start items-start pb-2 mt-4 am:mt-0">
                      <div>
-                        <p class="text-2xl">
+                        <p class="text-2xl font-semibold">
                            {{ a.title }}
                         </p>
                         <p class="text-md text-gray-400">
