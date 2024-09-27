@@ -3,8 +3,17 @@
 @tailwind utilities;
 
 @layer utilities {
+
+   .bg-coff-main {
+      @apply bg-coff-1000 text-white border-coff-400
+   }
+
+   .bg-coff-sub-2 {
+      @apply bg-white text-coff-1000 border-coff-400
+   }
+
    .light-t {
-      @apply bg-gray-100 text-black border-gray-400
+      @apply bg-white text-black border-gray-500
    }
    .dark-t {
       @apply bg-gray-900 text-white border-white

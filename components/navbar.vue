@@ -23,9 +23,9 @@
 <template>
    <SearchModal :is-open="isModalOpen" @is-close="(v) => isModalOpen = v" />
 
-   <div class="w-ful flex z-90" :class="{ 'dark:dark': isDark }">
-      <header class="relative w-full px-4 py-3 flex flex-wrap justify-between items-center shadow-md shadow-gray-200"
-         :class="{ 'dark:bg-gray-900 shadow-none border-b-2': isDark }">
+   <div class="w-full light-t flex z-90" :class="{ 'dark:dark': isDark }">
+      <header class="relative w-full px-4 py-3 flex flex-wrap justify-between items-center border-b-2 "
+         :class="{ 'dark:dark-t border-b-2': isDark }">
          <div class="text-xl font-text font-semibold ">
             <NuxtLink to="/">Phanuphun.na - Blog </NuxtLink>
          </div>

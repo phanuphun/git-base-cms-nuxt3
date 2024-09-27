@@ -7,11 +7,18 @@ const isSideBarOpen = useSideBarOpen()
 const readState = usePageState()
 const isDark = useTheme()
 const tocData = useTocData([])
+const isXl = useScreenSize()
+
+onMounted(() => {
+   if (readState.value === 'reading' && isXl.value === true) {
+      isSideBarOpen.value = true
+   }
+})
 
 watch(readState, () => {
    if (readState.value === 'exploring') {
       isSideBarOpen.value = false
-   } else if (readState.value === 'reading') {
+   } else if (readState.value === 'reading' && isXl.value === true ) {
       isSideBarOpen.value = true
    }
 })
@@ -21,9 +28,6 @@ function scrollToTop() {
       top: 0
    })
 }
-
-
-
 </script>
 
 <template>

@@ -55,9 +55,6 @@ function getDataLength(){
 
 <template>
    <div class="w-auto flex flex-col">
-      <!-- <PersobalBox></PersobalBox>
-      <p class="text-left text-3xl pl-2">บทความ ({{ length }})</p>
-      <Divider></Divider> -->
       <div class="flex flex-col justify-center items-center gap-2 mt-4">
          <div v-for="a in data" :key="a._id" class="w-full h-full rounded-md card-light-t"
             :class="{ 'dark:dark-t dark:card-dark-t': isDark }">

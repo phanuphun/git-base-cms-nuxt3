@@ -16,21 +16,24 @@ useTocData(data.value?.body?.toc?.links!) // update toc
 </script>
 
 <template>
-   <div class="bg-white mt-8" :class="{ 'dark:dark-t': isDark }">
+   <div class="" :class="{ 'dark:dark-t': isDark }">
       <ContentDoc :path="`/articles/${path}`">
          <template #default="{ doc }">
-            <header>
-               <div class="texet-center p-0">
-                  <h1 class="text-5xl font-semibold">{{ doc.title }}</h1>
-                  <div class="text-gray-500 text-sm mt-2">
-                     วันที่: {{ formatDate(doc.date) }}
+            <div class="w-full h-full relative">
+               <!-- <Toolbar class=" sticky top-0"></Toolbar> -->
+               <div class="mt-8">
+                  <div class="texet-center p-0">
+                     <h1 class="text-5xl font-semibold">{{ doc.title }}</h1>
+                     <div class="text-gray-500 text-sm mt-2">
+                        วันที่: {{ formatDate(doc.date) }}
+                     </div>
                   </div>
                </div>
-            </header>
-            <div class="mt-4 flex flex-col">
-               <ContentRenderer class="max-w-full prose prose-xl xl:prose-lg break-words"
-                  :class="{ 'dark:prose-invert text-white': isDark }" :value="doc">
-               </ContentRenderer>
+               <div class="mt-4 flex flex-col">
+                  <ContentRenderer class="max-w-full prose prose-xl xl:prose-lg break-words"
+                     :class="{ 'dark:prose-invert text-white': isDark }" :value="doc">
+                  </ContentRenderer>
+               </div>
             </div>
          </template>
          <template #not-found>

@@ -5,12 +5,26 @@ export default {
    purge: false,
    theme: {
       extend: {
+         colors:{
+            coff:{
+               100: '#fcf7f2',
+               200: '#E6B8A2',
+               300: '#DEAB90',
+               400: '#D69F7E',
+               500: '#CD9777',
+               600: '#C38E70',
+               700: '#B07D62',
+               800: '#9D6B53',
+               900: '#8A5A44',
+               1000: '#583101'
+            }
+         },
          typography: (theme) => ({
             DEFAULT:{
                css:{
                   'code': {
                      backgroundColor: theme('colors.gray.200'),
-                     color: theme('colors.pink.500'),
+                     color: theme('colors.red.500'),
                      padding: '0.2em 0.4em',
                      borderRadius: '0.25rem',
                      fontWeight: '600',
@@ -36,7 +50,7 @@ export default {
                css: {
                   'code': {
                   backgroundColor: `#1E242A`,
-                  color: theme('colors.white'),
+                  color: theme('colors.red.500'),
                   },
                   'ul li::marker':{
                      color:'white'

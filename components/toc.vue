@@ -64,7 +64,7 @@ function sideBarBehavior(){
             <div class="mt-1 py-1 pl-4 rounded-md">
                <ul class="list-outside">
                   <li v-for="(content, index) in props.contents" :key="content.id"
-                     class="mt-2 list-none text-md w-full  ">
+                     class="mt-2 list-none text-lg w-full  ">
                      <NuxtLink :to="`#${encodeURIComponent(content.id)}`" @click="sideBarBehavior()">
                         <span class="text-lg font-semibold hover:text-blue-500">
                            {{ content.text }}
@@ -72,7 +72,7 @@ function sideBarBehavior(){
                      </NuxtLink>
                      <ul class="pl-8 list-outside" v-if="content.children">
                         <li v-for="(subContent, index) in content.children" :key="subContent.id"
-                           class=" list-disc hover:text-blue-500 text-md w-full">
+                           class=" list-disc hover:text-blue-500 w-full">
                            <NuxtLink :to="`#${encodeURIComponent(subContent.id)}`" @click="sideBarBehavior()">
                               <span class="">
                                  {{ subContent.text }}

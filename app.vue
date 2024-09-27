@@ -28,7 +28,7 @@ const isSideBarOpen = useSideBarOpen()
       <div class="relative w-full h-full mx-auto border-gray-200 flex-1 flex">
          <SideBar></SideBar>
          <!-- main -->
-         <div id="mainContain" class="flex-1 pb-8 max-w-full pl-16 pr-8 xl:px-16 flex justify-end">
+         <div id="mainContain" class="flex-1 pb-8 max-w-full px-8 xl:px-16 flex justify-end">
             <div class="w-full transition-all duration-200"
             :class="{ 'xl:w-[calc(100%-300px)]': isSideBarOpen && readState ==='reading' }">
                <NuxtPage />
