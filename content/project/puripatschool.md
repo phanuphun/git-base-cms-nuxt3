@@ -8,7 +8,7 @@ tags:
    - Project
 img: /img/puripatSchool/cover.png
 path: puripatschool
-draft: false
+draft: true
 ---
 
 ---
