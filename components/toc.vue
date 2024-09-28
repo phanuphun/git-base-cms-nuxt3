@@ -1,6 +1,4 @@
 <script setup lang="ts">
-
-const isDark = useTheme()
 const isSideBarOpen = useSideBarOpen()
 
 interface TocLink {

@@ -1,6 +1,4 @@
 <script setup lang="ts">
-const isDark = useTheme()
-
 type BtnType = 'default' | 'youtube' | 'github' | 'file' | 'link'
 
 const props = defineProps<{
@@ -24,7 +22,7 @@ function checkIcon() {
 
 <template>
    <div class="w-full flex justify-center items-center py-1">
-      <button class="p-4 rounded-md card-light-t w-full" :class="{ 'dark:card-dark-t': isDark }">
+      <button class="p-4 rounded-md card-light-t w-full dark:card-dark-t">
          <NuxtLink :to="props.link" target="_blank">
             <div class="w-full flex flex-row items-center justify-start gap-2">
                <IconF :name="String(checkIcon())"></IconF>

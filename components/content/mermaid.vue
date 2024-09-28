@@ -11,15 +11,6 @@ onMounted(() => {
    })
    mermaid.contentLoaded()
 })
-
-// watch(isDark, () => {
-//    mermaid.initialize({
-//       startOnLoad: true,
-//       theme: isDark.value ? 'dark' : 'base'
-//    })
-//    mermaid.contentLoaded()
-// })
-
 </script>
 
 <template>

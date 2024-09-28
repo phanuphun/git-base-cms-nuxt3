@@ -8,7 +8,6 @@ const emit = defineEmits<{
    isClose: [value: boolean]
 }>()
 
-const isDark = useTheme()
 const search = ref<string>('')
 
 const searchParams = computed(() => ({
@@ -61,13 +60,13 @@ const highlightText = (text: string) => {
       class="fixed hidden inset-0 justify-center items-center bg-black bg-opacity-90 z-50">
       <div @click.self="closeModal()" class="w-full max-w-3xl h-screen p-6 ">
          <!-- Modal Container -->
-         <div class="w-full h-auto max-h-full rounded-md bg-white p-6 shadow-lg border-2 border-white flex flex-col"
-            :class="{ 'dark:dark-t': isDark }">
+         <div class="w-full h-auto max-h-full rounded-md bg-white p-6 shadow-lg border-2 border-white flex flex-col dark:dark-t"
+         >
             <!-- Header -->
             <div class="w-full flex flex-row justify-end items-center gap-3">
                <div class="w-full mt-3">
-                  <input v-model="search" type="text" placeholder="Search..." :class="{ 'text-black': isDark }"
-                     class="w-full text-xl rounded-md border-2 px-4 py-2">
+                  <input v-model="search" type="text" placeholder="Search..."
+                     class="w-full text-xl rounded-md dark:text-black border-2 px-4 py-2">
                </div>
             </div>
 
@@ -76,8 +75,7 @@ const highlightText = (text: string) => {
                <div class="h-auto overflow-auto">
                   <div class="flex flex-col" v-for="a in data" :key="a._id">
                      <NuxtLink :to="a._path" @click="closeModal()">
-                        <div class="w-full py-4 px-4 mt-2 text-xl card-light-t rounded-md"
-                        :class="{'dark:card-dark-t':isDark}">
+                        <div class="w-full py-4 px-4 mt-2 text-xl card-light-t rounded-md dark:card-dark-t">
                            <div v-html="highlightText(a.title!)"></div>
                            <p class="text-gray-400 text-sm">
                               {{useDateConverter(a.date) }}

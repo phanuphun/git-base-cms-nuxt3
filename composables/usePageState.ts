@@ -28,7 +28,7 @@ export const useSideBarOpen = () => {
    return useSideBarOpen
 }
 
-// check screen size
+// screen size
 export const useScreenSize = () => {
    const isXL = useState(()=>{
       if (process.client) {
@@ -37,4 +37,17 @@ export const useScreenSize = () => {
    }})
 
    return isXL
+}
+
+// theme
+export const useTheme = () => {
+   const isDarkMode = useState<boolean>('theme',()=> false)
+
+   if (process.client) {
+      if (localStorage.getItem('theme') === 'dark') {
+         isDarkMode.value = true
+      }
+   }
+
+   return isDarkMode
 }

@@ -1,8 +1,6 @@
 <script setup lang="ts">
-import { useTheme } from '#imports';
 import data from '../content/personal/personalData.json'
 
-const isDark = useTheme()
 const navbarH = '64px'
 
 
@@ -12,8 +10,8 @@ const navbarH = '64px'
    <div class=" text-md rounded-lg w-full break-words flex flex-wrap justify-center items-center py-16">
       <div class="w-1/5 flex justify-center items-center">
          <div class="w-fit rounded-full border-2 drop-shadow-2xl
-         transition-all duration-500 grayscale hover:grayscale-0"
-         :class="{ 'bg-gray-800 hover:bg-gray-700 grayscale-0': isDark }">
+         transition-all duration-500 grayscale hover:grayscale-0 dark:bg-gray-800 dark:hover:bg-gray-700 dark:grayscale-0"
+         >
             <img :src="data.image" alt="" class="rounded-full object-cover ">
          </div>
       </div>

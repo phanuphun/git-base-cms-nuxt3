@@ -5,6 +5,7 @@ description: "บันทึกการใช้งาน Nuxt Content ใน�
 tag: Note
 tags:
    - Nuxt
+   - Nuxt Module
    - Vue
    - CMS
 img: /img/nuxtContent/cover2.png
@@ -13,7 +14,9 @@ draft: false
 ---
 
 ---
+
 ## เบื้องต้น
+
 Nuxt Content คือ Module ที่ใน Framework Nuxt.js ที่ช่วยให้พัฒนาแอปพลิเคชันที่มีเนื้อหาแบบ dynamic โดยใช้ไฟล์ Markdown,JSON,YAML หรือ CSV เป็นแหล่งเก็บข้อมูล ซึ่งข้อมูลเหล่านี้ไม่จำเป็นต้องพึ่งพาฐานข้อมูลแบบดัง ทำให้การพัฒนาเว็บไซต์ที่เน้นเนื้อหามีความสะดวกและยืดหยุ่น
 
 ### โครงสร้างไฟล์สำคัญ
@@ -54,7 +57,7 @@ path: "nuxt-content"
 ```
 
 <ref-box>
- <b>Native parameter</b> ป็นค่าที่ Nuxt Content รองรับและสามารถนำไปใช้ใน SEO หรือแสดงผลในส่วนต่างๆ ของหน้าเว็บ<a class="text-blue-400 hover:text-blue-600" href="https://content.nuxt.com/usage/markdown#front-matter"> เอกสาร 📄 </a>
+ <b>Native parameter</b> เป็นค่าที่ Nuxt Content รองรับและสามารถนำไปใช้ใน SEO หรือแสดงผลในส่วนต่างๆ ของหน้าเว็บ<a class="text-blue-400 hover:text-blue-600" href="https://content.nuxt.com/usage/markdown#front-matter"> เอกสาร 📄 </a>
 </ref-box>
 
 ### การเพิ่ม Markdown Style
@@ -308,11 +311,10 @@ Table of content(TOC) เป็นการทำสารบัญจากแ�
 ## อ้างอิง
 
 <ref-box>
-- https://content.nuxt.com/get-started/installation
-- https://github.com/nuxt/content/discussions/1343
-- https://nuxt.com/docs/getting-started/introduction
-- https://tailwindcss.com/docs/configuration
-- https://github.com/tailwindlabs/tailwindcss-typography#customizing-the-css
-- https://www.mongodb.com/docs/manual/reference/operator/query/
-
+https://content.nuxt.com/get-started/installation
+https://github.com/nuxt/content/discussions/1343
+https://nuxt.com/docs/getting-started/introduction
+https://tailwindcss.com/docs/configuration
+https://github.com/tailwindlabs/tailwindcss-typography#customizing-the-css
+https://www.mongodb.com/docs/manual/reference/operator/query/
 </ref-box>
