@@ -63,7 +63,8 @@ module.exports = {
 ```js
 // JavaScript สำหรับสลับโหมดมืด
 const toggleDarkMode = () => {
-  document.documentElement.classList.toggle('dark');
+   const bodyElement = document.body;
+   bodyElement.classList.toggle('dark');
 }
 ```
 
