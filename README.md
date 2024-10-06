@@ -11,7 +11,7 @@
       
    </p>
    <p>
-      <a href="phanuphun-blog.vercel.app/blogs"> phanuphun-blog.vercel.app/blogs </a>
+      <a href="https://phanuphun-blog.vercel.app/blogs"> phanuphun-blog.vercel.app/blogs </a>
    </p>
 </div>
 <br>
