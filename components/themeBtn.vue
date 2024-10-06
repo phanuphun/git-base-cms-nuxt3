@@ -23,7 +23,7 @@ function toggleMode(){
 <template>
    <div :class="{'dark:dark-t':isDark}">
       <button @click="toggleMode()" class="rounded-md">
-         <IconF :name="isDark ?'uil:moon' : 'uil:sun'" />
+         <IconF :hover="true" :name="isDark ?'uil:moon' : 'uil:sun'" />
       </button>
    </div>
 </template>

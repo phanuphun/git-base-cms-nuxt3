@@ -4,6 +4,18 @@
 
 @layer utilities {
 
+   .link {
+      @apply hover:text-blue-600 cursor-pointer
+   }
+
+   .li-link-right {
+      @apply cursor-pointer hover:translate-x-2 transition-all duration-200
+   }
+
+   .link-blue {
+      @apply text-blue-500 hover:text-blue-600 cursor-pointer
+   }
+
    .bg-coff-main {
       @apply bg-coff-1000 text-white border-coff-400
    }
@@ -15,13 +27,16 @@
    .light-t {
       @apply bg-white text-black border-gray-500
    }
+
    .dark-t {
       @apply bg-gray-900 text-white border-white
    }
-   .card-light-t{
+
+   .card-light-t {
       @apply bg-gray-200 hover:bg-gray-300 text-black border-gray-400 cursor-pointer transition-all duration-200
    }
-   .card-dark-t{
-      @apply bg-gray-800 hover:bg-gray-700 text-white border-white cursor-pointer  transition-all duration-200
+
+   .card-dark-t {
+      @apply bg-gray-800 hover:bg-gray-700 text-white border-white cursor-pointer transition-all duration-200
    }
 }

@@ -13,12 +13,13 @@ html {
    font-family: 'Playwrite CU', sans-serif;
 }
 
+/* delele `` */
 .prose code::before {
-   content: none; /* ลบ content ก่อนหน้า */
+   content: none;
  }
 
  .prose code::after {
-   content: none; /* ลบ content หลัง */
+   content: none;
  }
 
 /* scroll bar */

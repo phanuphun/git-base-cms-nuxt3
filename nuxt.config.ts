@@ -8,23 +8,17 @@ export default defineNuxtConfig({
       "@nuxt/image",
       "@nuxt/icon",
    ],
-   css: ["~/assets/css/global.css", "~/assets/css/tailwind.css"],
+   css: [
+      "~/assets/css/global.css",
+      "~/assets/css/bgPattern.css",
+      "~/assets/css/tailwind.css",
+   ],
    routeRules: {
       "/": { prerender: true },
    },
    content: {
       highlight: {
          theme: "material-theme-ocean",
-         langs: [
-            "mermaid",
-            "md",
-            "ts",
-            "javascript",
-            "html",
-            "css",
-            "vue",
-            "shell",
-         ],
       },
       markdown: {},
    },

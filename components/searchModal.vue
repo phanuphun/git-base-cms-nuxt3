@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import { useDateConverter } from '~/composables/useDateConverter'
+
 const props = defineProps<{
    isOpen: boolean
 }>()
@@ -9,7 +10,6 @@ const emit = defineEmits<{
 }>()
 
 const search = ref<string>('')
-
 const searchParams = computed(() => ({
    $or: [
       { title: { $regex: new RegExp(search.value, 'i') } },
@@ -20,14 +20,13 @@ const searchParams = computed(() => ({
 const {data , refresh} = getData()
 
 function getData() {
-   return useAsyncData('searchData', () => queryContent('/article')
+   return useAsyncData('searchData', () => queryContent('/blogs')
       .where(searchParams.value)
       .find()
    )
 }
 
 watch(search ,()=>{
-   console.log(data.value);
    refresh()
 })
 

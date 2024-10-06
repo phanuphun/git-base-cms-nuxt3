@@ -14,7 +14,7 @@ onMounted(() => {
 })
 
 watch(readState, () => {
-   if (readState.value === 'exploring') {
+   if (readState.value === 'exploring' || readState.value === 'idle' ) {
       isSideBarOpen.value = false
    } else if (readState.value === 'reading' && isXl.value === true) {
       isSideBarOpen.value = true
@@ -37,7 +37,7 @@ function scrollToTop() {
                class="absolute top-3 z-30 -right-12 transition-all duration-200">
                <div class="w-full flex flex-col gap-4 justify-end">
                   <div id="sidebarBtn" @click="isSideBarOpen = !isSideBarOpen">
-                     <IconF name="uil:book-open"></IconF>
+                     <IconF :hover="true" name="uil:book-open"></IconF>
                   </div>
                </div>
             </div>

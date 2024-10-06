@@ -25,16 +25,13 @@ watch(isModalOpen, (newVal) => {
    <div class="w-full light-t flex z-90 dark:dark">
       <header class="relative w-full px-4 py-3 flex flex-wrap justify-between items-center border-b-2 dark:dark-t">
          <div class="text-xl font-text font-semibold ">
-            <NuxtLink to="/">Phanuphun.na - Blog </NuxtLink>
+            <NuxtLink to="/blogs">Phanuphun.na - Blog </NuxtLink>
          </div>
          <div class="w-auto flex flex-row gap-3">
             <IconF @click="openSearch()" name="uil:search" />
             <div>
                <themeBtn></themeBtn>
             </div>
-            <!-- <NuxtLink :to="gitLink" target="_blank">
-               <IconF name="uil:github" />
-            </NuxtLink> -->
          </div>
       </header>
    </div>
