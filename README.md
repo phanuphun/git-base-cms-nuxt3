@@ -4,10 +4,11 @@
       Personal Blog
    </h1>
    <p>
-     A personal blog where I will write down anything that I have learned. 
+     A personal blog where I will write down anything that I have learned. <br>
+      This blog is in the form of a git-based CMS that manages content through Nuxt Studio.
    </p>
    <p>
-      This blog is in the form of a git-based CMS that manages content through Nuxt Studio.
+      
    </p>
    <p>
       <a href="phanuphun-blog.vercel.app/blogs"> phanuphun-blog.vercel.app/blogs </a>
