@@ -5,7 +5,7 @@
    </h1>
    <p>
      A personal blog where I will write down anything that I have learned. <br>
-      This blog is in the form of a git-based CMS that manages content through Nuxt Studio.
+    This blog is a Git-based CMS that manages content through Nuxt Studio
    </p>
    <p>
       
