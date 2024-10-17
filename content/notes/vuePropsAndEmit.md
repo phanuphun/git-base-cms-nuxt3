@@ -7,7 +7,7 @@ path: vuePropsAndEmit
 draft: false
 ---
 
-1. การรับค่าเข้ามาใน Component <br>
+1. **การรับค่าเข้ามาใน Component** <br>
 
 ```vue
 <!-- Component -->
@@ -25,12 +25,14 @@ draft: false
 </template>
 ```
 
-2. การปล่อยค่าออกจาก Component
+2. **การปล่อยค่าออกจาก Component** <br>
+vue จะเปลี่ยน event name จาก camel case  เป็น kebab caseเช่น EventName => event-name
+***โดยจะรับค่าด้วย CallBack Funtion***
 ```vue
 <!-- Component -->
 <script setup lang="ts">
    const emit = defineEmits<{
-      (event:'EventName',size: Type):void
+      (event:'EventName',size: T):void
    }>()
 </script>
 
@@ -38,12 +40,6 @@ draft: false
 <script setip lang="ts">
 </script>
 <template>
-   <!--
-   vue จะเปลี่ยน camel case  เป็น kebab case
-   เช่น EventName => event-name
-   *** ต้องรรับค่าเป็น CallBack Funtion เท่านั้น
-   -->
-   <ComponentName @event-name="(valueReturn:T)
-   => { someFunction() }" >
+   <ComponentName @event-name="(valueReturn:T) => { someFunction() }" />
 </template>
 ```

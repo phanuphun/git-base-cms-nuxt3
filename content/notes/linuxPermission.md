@@ -1,0 +1,19 @@
+---
+title: Permission บน Linux
+date: '2024/09/12'
+tool: Linux
+img: ''
+path: linuxPermission
+draft: false
+---
+
+<img src="https://www.liquidweb.com/wp-content/uploads/2024/03/permission-structure-1.png" alt="drawing" width="500"/>
+
+**การให้ Permission** : ใช้ตัวเลขในการกำหนดสิทธิ และแบ่งออกเป็นสามส่วนเพื่อจำแนกแต่ละสิทธิ ดังนี้
+- `r` 4 : Read คือ สิทธิในการอ่าน
+- `w` 2 : Write คือ สิทธิในการแก้ไข
+- `x` 1 : Execute คือ สิทธิในการเรียกใช้งาน
+<br>
+เช่น `chmod 755 filename` จากตัวอย่างสิทธิจะเป็น `rwx | r-x | r-x` มาจาก `(4+2+1) | (4+1) | (4+1)` โดยที่ User สามารถ Read,Write และ Execute ส่วน Group กับ Other จะไม่สารถ Write ได้แต่สามารถ Read กับ Execute ได้
+
+

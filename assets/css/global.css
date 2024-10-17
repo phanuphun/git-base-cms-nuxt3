@@ -41,3 +41,8 @@ html {
 ::-webkit-scrollbar-thumb:hover {
    background: #64748b;
 }
+
+/* code box */
+pre {
+   background-color: #f5f5f5; /* สีพื้นหลังใหม่ */
+ }

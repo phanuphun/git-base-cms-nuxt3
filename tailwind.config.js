@@ -28,6 +28,9 @@ export default {
                      borderRadius: '0.25rem',
                      fontWeight: '600',
                   },
+                  'pre': {
+                     // backgroundColor: theme('colors.gray.400'),
+                  },
                   'h2':{
                      fontSize: theme('fontSize.4xl'),
                      fontWeight: '900'
