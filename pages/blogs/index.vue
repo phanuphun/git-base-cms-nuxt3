@@ -49,7 +49,8 @@ function getData() {
 <template>
    <div class="w-auto flex flex-col">
       <div class="flex flex-col justify-center items-center gap-2 mt-4">
-         <div v-for="a in data" :key="a._id" class="w-full h-full rounded-md card-light-t dark:dark-t dark:card-dark-t">
+         <div v-for="a in data" :key="a._id" class="w-full h-full rounded-none border-2
+          card-light-t dark:dark-t dark:card-dark-t">
             <NuxtLink :to="a._path">
                <div class="p-3 flex flex-col sm:flex-row  ">
                   <div class="w-auto">

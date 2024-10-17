@@ -14,7 +14,7 @@ export const usePageState = () => {
   } else if (route.path.startsWith('/blogs/')) {
     readState.value = 'reading'
   } else {
-    readState.value = 'idle'
+    readState.value = 'exploring'
   }
 
   return readState

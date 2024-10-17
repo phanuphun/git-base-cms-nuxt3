@@ -76,9 +76,8 @@ const highlightText = (text: string) => {
                      <NuxtLink :to="a._path" @click="closeModal()">
                         <div class="w-full py-4 px-4 mt-2 text-xl card-light-t rounded-md dark:card-dark-t">
                            <div v-html="highlightText(a.title!)"></div>
-                           <p class="text-gray-400 text-sm">
-                              {{useDateConverter(a.date) }}
-                           </p>
+                           <div class="text-sm mt-2 font-extralight text-gray-600 dark:text-gray-400"
+                           v-html="highlightText(a.description!)"></div>
                         </div>
                      </NuxtLink>
                   </div>

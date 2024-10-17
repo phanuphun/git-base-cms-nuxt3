@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import navbar from "~/components/navbar.vue";
+import Navbar from "~/layouts/navbar.vue";
 import { useTheme, usePageState } from "#imports";
 const readState = usePageState();
 const isDark = useTheme();
@@ -123,7 +123,8 @@ const projects: Array<ProjectDetail> = [
 </script>
 
 <template>
- <div class="w-full flex justify-center px-6 sm:px-12 md:px-0 bg-gray-100">
+   <navbar></navbar>
+ <!-- <div class="w-full flex justify-center px-6 sm:px-12 md:px-0 bg-gray-100">
       <div class="w-full flex flex-col justify-center items-center py-16">
          <div class="w-full md:w-9/12 lg:w-8/12 xl:w-6/12 h-full flex">
             <div class="w-full flex flex-col">
@@ -253,7 +254,7 @@ const projects: Array<ProjectDetail> = [
             </div>
          </div>
       </div>
-   </div>
+   </div> -->
 </template>
 
 <style></style>
