@@ -33,6 +33,7 @@ const toolIcons: Record<string, string> = {
    Puppeteer: 'devicon:puppeteer',
    Python: 'devicon:python',
    Socketio: 'devicon:socketio',
+   Steam : 'cib:steam',
    Tailwind: 'devicon:tailwindcss',
    Typescript: 'devicon:typescript',
    Ubuntu: 'logos:ubuntu',
