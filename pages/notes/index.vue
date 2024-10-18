@@ -1,26 +1,53 @@
 <script setup lang="ts">
-const { data } = await useAsyncData('note', () => queryContent('/notes').find())
+const { data } = await useAsyncData('note', () =>
+   queryContent('/notes')
+      .sort({ date: -1 })
+      .find()
+)
 
-type ToolsType = 'Typescipt'
-   | 'Javascript'
-   | 'Git'
-   | 'Docker'
-   | 'Vue'
-   | 'NPM'
-   | 'Linux'
-
-function checkToolsIcon(tool: ToolsType) {
-   if (tool === 'Git') return 'devicon:git'
-   else if (tool === 'Typescipt') return 'devicon:typescript'
-   else if (tool === 'Javascript') return 'devicon:javascript'
-   else if (tool === 'Docker') return 'devicon:docker'
-   else if (tool === 'Vue') return 'devicon:vuejs'
-   else if (tool === 'NPM') return 'devicon:npm'
-   else if (tool === 'Linux') return 'devicon:linux'
-   else if (tool === 'EditorConfig') return 'vscode-icons:file-type-editorconfig'
-   else if (tool === 'Gulb') return 'vscode-icons:file-type-gulp'
-   return 'devicon:vscode'
+const toolIcons: Record<string, string> = {
+   Angular: 'devicon:angularjs',
+   Bootstrap: 'devicon:bootstrap',
+   CSS: 'devicon:css3',
+   Docker: 'devicon:docker',
+   EditorConfig: 'vscode-icons:file-type-editorconfig',
+   EJS: 'vscode-icons:file-type-ejs',
+   Express: 'devicon:express',
+   Git: 'devicon:git',
+   Gulb: 'vscode-icons:file-type-gulp',
+   HTML: 'devicon:html5',
+   HTTP: 'carbon:http',
+   Javascript: 'devicon:javascript',
+   JWT: 'logos:jwt-icon',
+   Linux: 'devicon:linux',
+   Mermaid: 'vscode-icons:file-type-mermaid',
+   MongoDb: 'devicon:mongodb',
+   MySQL: 'devicon:mysql',
+   NodeJs: 'devicon:nodejs',
+   NPM: 'devicon:npm',
+   Nuxt: 'devicon:nuxtjs',
+   PHP: 'devicon:php',
+   Postgresql: 'devicon:postgresql',
+   Postman: 'devicon:postman',
+   Prisma: 'devicon:prisma',
+   Puppeteer: 'devicon:puppeteer',
+   Python: 'devicon:python',
+   Socketio: 'devicon:socketio',
+   Tailwind: 'devicon:tailwindcss',
+   Typescript: 'devicon:typescript',
+   Ubuntu: 'logos:ubuntu',
+   Vue: 'devicon:vuejs',
+   Vuetify: 'devicon:vuetify',
 }
+
+onMounted(() => {
+   console.log(toolIcons['Git']);
+})
+
+function checkToolsIcon(tool: string): string {
+   return toolIcons[tool] || 'devicon:vscode';
+}
+
 </script>
 
 <template>
@@ -32,7 +59,7 @@ function checkToolsIcon(tool: ToolsType) {
             <div class="w-full border-2 border-gray-200">
                <div class="w-full flex flex-row border-b-2 p-3 bg-gray-100 ">
                   <div class="">
-                     <iconF :name="String(checkToolsIcon(note.tool))"></iconF>
+                     <iconF :name="checkToolsIcon(note.tool)"></iconF>
                   </div>
                   <p class="px-2 text-xl font-semibold"> {{ note.title }}</p>
                </div>

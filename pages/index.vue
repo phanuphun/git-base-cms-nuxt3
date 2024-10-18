@@ -124,6 +124,9 @@ const projects: Array<ProjectDetail> = [
 
 <template>
    <navbar></navbar>
+   <div class="w-full h-[calc(100vh-58px)] flex justify-center items-center ">
+      <img src="/storysetSleep.svg" alt="" class="w-1/2 lg:w-5/12">
+   </div>
  <!-- <div class="w-full flex justify-center px-6 sm:px-12 md:px-0 bg-gray-100">
       <div class="w-full flex flex-col justify-center items-center py-16">
          <div class="w-full md:w-9/12 lg:w-8/12 xl:w-6/12 h-full flex">

@@ -1,6 +1,6 @@
 ---
 title: ตั้งค่าไฟล์ .editorconfig
-date: '2024/09/12'
+date: '2024/10/17'
 tool: EditorConfig
 img: ''
 path: npmPublishPackage

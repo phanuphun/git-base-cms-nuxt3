@@ -1,6 +1,6 @@
 ---
 title: คำสั่งเผยแพร่ Package ขึ้น NPM
-date: '2024/09/12'
+date: '2024/10/17'
 tool: NPM
 img: ''
 path: npmPublishPackage

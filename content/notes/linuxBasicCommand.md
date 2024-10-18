@@ -1,6 +1,6 @@
 ---
 title: คำสั่งพื้นฐาน Linux
-date: '2024/09/12'
+date: '2024/10/17'
 tool: Linux
 img: ''
 path: linuxBasicCommand
