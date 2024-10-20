@@ -1,7 +1,8 @@
 ---
 title: ตั้งค่าไฟล์ .editorconfig
 date: '2024/10/17'
-tool: EditorConfig
+tool: VsCode
+subTool: EditorConfig
 img: ''
 path: npmPublishPackage
 draft: false

@@ -24,13 +24,13 @@ watch(isModalOpen, (newVal) => {
    <SearchModal :is-open="isModalOpen" @is-close="(v) => isModalOpen = v" />
 
    <div class="w-full light-t flex z-90 dark:dark">
-      <header class="relative w-full px-4 py-3 flex flex-wrap justify-between items-center border-b-2 dark:dark-t">
+      <header class="relative w-full px-4 py-4 flex flex-wrap justify-between items-center border-b-2 dark:dark-t">
          <div class="text-xl font-text font-semibold flex gap-4 ">
-            <NuxtLink to="/">
+            <!-- <NuxtLink to="/">
                <span class="hover:text-blue-700 cursor-pointer dark:hover:text-blue-400">
                   🏠 หน้าแรก
                </span>
-            </NuxtLink>
+            </NuxtLink> -->
             <NuxtLink to="/blogs">
                <span class="hover:text-blue-700 cursor-pointer dark:hover:text-blue-400">
                   📰 บทความ
@@ -43,10 +43,10 @@ watch(isModalOpen, (newVal) => {
             </NuxtLink>
          </div>
          <div class="w-auto flex flex-row gap-3">
-            <IconF @click="openSearch()" name="uil:search" class="cursor-pointer"/>
+            <!-- <IconF @click="openSearch()" name="uil:search" class="cursor-pointer"/>
             <div>
-               <!-- <themeBtn></themeBtn> -->
-            </div>
+               <themeBtn></themeBtn>
+            </div> -->
          </div>
       </header>
    </div>

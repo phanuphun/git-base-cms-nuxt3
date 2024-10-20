@@ -57,6 +57,10 @@ const experiants: Array<ExperiantDetail> = [
    },
 ];
 
+definePageMeta({
+   middleware:['redirect']
+})
+
 const { data } = getData();
 
 function getData() {

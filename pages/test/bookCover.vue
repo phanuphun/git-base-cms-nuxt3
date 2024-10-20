@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import navbar from "~/components/navbar.vue";
 import { useTheme, usePageState } from "#imports";
 const readState = usePageState();
 const isDark = useTheme();
