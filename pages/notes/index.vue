@@ -71,9 +71,9 @@ async function getLengthContent(tool: string): Promise<number> {
    <div class="w-full min-h-[calc(100vh-200px)] ">
       <div class="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
          <div v-for="(tool, key) in lengthContents" :key="key"
-            class="w-full border-2 flex  items-center
+            class="w-full border-2 flex  items-center fade-in
             hover:bg-gray-100 hover:text-blue-500 cursor-pointer">
-            <NuxtLink :to="`notes/${key}`">
+            <NuxtLink :to="`notes/${key}`" class="w-full">
                <div class="w-full h-full flex items-center gap-4 py-3 px-4">
                   <iconF :name="checkToolsIcon(key)"></iconF>
                   {{ key }}
@@ -83,3 +83,7 @@ async function getLengthContent(tool: string): Promise<number> {
       </div>
    </div>
 </template>
+
+<style scoped>
+
+</style>

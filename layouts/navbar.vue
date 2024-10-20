@@ -24,7 +24,7 @@ watch(isModalOpen, (newVal) => {
    <SearchModal :is-open="isModalOpen" @is-close="(v) => isModalOpen = v" />
 
    <div class="w-full light-t flex z-90 dark:dark">
-      <header class="relative w-full px-4 py-4 flex flex-wrap justify-between items-center border-b-2 dark:dark-t">
+      <header class="relative w-full px-4 py-4 flex flex-wrap justify-end items-center border-b-2 dark:dark-t">
          <div class="text-xl font-text font-semibold flex gap-4 ">
             <!-- <NuxtLink to="/">
                <span class="hover:text-blue-700 cursor-pointer dark:hover:text-blue-400">
@@ -42,12 +42,12 @@ watch(isModalOpen, (newVal) => {
                </span>
             </NuxtLink>
          </div>
-         <div class="w-auto flex flex-row gap-3">
-            <!-- <IconF @click="openSearch()" name="uil:search" class="cursor-pointer"/>
+         <!-- <div class="w-auto flex flex-row gap-3">
+            <IconF @click="openSearch()" name="uil:search" class="cursor-pointer"/>
             <div>
                <themeBtn></themeBtn>
-            </div> -->
-         </div>
+            </div>
+         </div> -->
       </header>
    </div>
 </template>
