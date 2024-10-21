@@ -24,7 +24,12 @@ watch(isModalOpen, (newVal) => {
    <SearchModal :is-open="isModalOpen" @is-close="(v) => isModalOpen = v" />
 
    <div class="w-full light-t flex z-90 dark:dark">
-      <header class="relative w-full px-4 py-4 flex flex-wrap justify-end items-center border-b-2 dark:dark-t">
+      <header class="relative w-full px-24 flex flex-wrap justify-between items-center border-b-2 dark:dark-t">
+         <NuxtLink to="/">
+            <div class="py-2 my-2 text-3xl font-medium underline text-gray-500">
+               F I R S T
+            </div>
+         </NuxtLink>
          <div class="text-xl font-text font-semibold flex gap-4 ">
             <!-- <NuxtLink to="/">
                <span class="hover:text-blue-700 cursor-pointer dark:hover:text-blue-400">
@@ -33,12 +38,12 @@ watch(isModalOpen, (newVal) => {
             </NuxtLink> -->
             <NuxtLink to="/blogs">
                <span class="hover:text-blue-700 cursor-pointer dark:hover:text-blue-400">
-                  📰 บทความ
+                  BLOG
                </span>
             </NuxtLink>
             <NuxtLink to="/notes">
                <span class="hover:text-blue-700 cursor-pointer dark:hover:text-blue-400">
-                  ✍️ โน๊ต
+                  NOTE
                </span>
             </NuxtLink>
          </div>

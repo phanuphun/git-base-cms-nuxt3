@@ -28,7 +28,7 @@ const isSideBarOpen = useSideBarOpen();
       <Navbar></Navbar>
       <div class="relative mx-auto flex h-full w-full flex-1 border-gray-200">
          <SideBar></SideBar>
-         <div id="mainContain" class="flex max-w-full flex-1 justify-end px-8 pb-8 xl:px-16">
+         <div id="mainContain" class="flex max-w-full flex-1 justify-end px-8 py-4 xl:px-24">
             <div class="w-full transition-all duration-200" :class="{
                'xl:w-[calc(100%-300px)]':
                isSideBarOpen && readState === 'reading',

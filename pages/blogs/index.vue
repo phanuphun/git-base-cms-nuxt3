@@ -83,9 +83,9 @@ function getData() {
 
       </div>
 
-      <div class="w-full flex flex-row justify-center gap-2 mt-4">
-         <Btn name="Previose" @click="previosePage" :disable="skip === 0" />
-         <Btn name="Next" @click="nextPage" :disable="skip+limit >= length!" />
+      <div class="w-full flex flex-row justify-end gap-2 mt-4">
+         <Btn name="ก่อนหน้า" @click="previosePage" :disable="skip === 0" />
+         <Btn name="ถัดไป" @click="nextPage" :disable="skip+limit >= length!" />
       </div>
    </div>
 </template>
