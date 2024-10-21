@@ -3,11 +3,7 @@ title: Nuxt Content
 date: '2024/09/12'
 description: บันทึกการใช้งาน Nuxt Content ในการทำเว็บบล็อค ในรูปแบบ Git-base CMS
 tag: Note
-tags:
-   - Nuxt
-   - Nuxt Module
-   - Vue
-   - CMS
+tags: ['Nuxt' , 'Nuxt Module' , 'Vue' , 'CMS']
 img: /img/nuxtContent/cover2.png
 path: basicNuxtContent
 draft: false

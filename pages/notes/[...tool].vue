@@ -14,7 +14,7 @@ onMounted(()=>{
 </script>
 
 <template>
-   <div class="w-full h-full min-h-screen">
+   <div class="w-full h-full min-h-[calc(100vh-200px)]">
       <div class="gap-5 lg:gap-8 columns-1 sm:columns-2 lg:columns-3
             [&>img:not(:first-child)]:mt-5 lg:[&>img:not(:first-child)]:mt-8">
          <div v-for="note in data" :key="note._id" class="break-inside-avoid mb-5 whitespace-normal">

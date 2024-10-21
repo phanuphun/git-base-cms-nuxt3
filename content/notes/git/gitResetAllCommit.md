@@ -1,6 +1,6 @@
 ---
 title: วิธีลบ Commit ทั้งหมดใน Repository
-date: '2024/10/17'
+date: '2024/10/21'
 tool: Git
 img: ''
 path: gitResetAllCommit

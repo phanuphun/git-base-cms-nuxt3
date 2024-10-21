@@ -54,12 +54,12 @@ function getData() {
             <NuxtLink :to="a._path">
                <div class="p-3 flex flex-col sm:flex-row  ">
                   <div class="w-auto">
-                     <div class="w-full sm:w-[300px] rounded-md">
+                     <!-- <div class="w-full sm:w-[300px]">
                         <img
                         :src="a.img ? a.img :'/img/default/no-cover.png'"
                         alt="article cover"
-                        class="w-full sm:w-[300px] rounded-md object-fill duration-200 dark:grayscale-0">
-                     </div>
+                        class="w-full sm:w-[300px] object-fill duration-200 dark:grayscale-0">
+                     </div> -->
                   </div>
                   <div class="w-full sm:px-4 flex justify-start items-start pb-2 mt-4 am:mt-0">
                      <div>

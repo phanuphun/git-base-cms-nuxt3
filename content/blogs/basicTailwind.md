@@ -3,12 +3,10 @@ title: Tailwind CSS
 date: '2024-09-27'
 description: บันทึกการใช้งาน Tailwind CSS
 tag: Note
-tags:
-   - Tailwind
-   - CSS Framework
+tags: ['Tailwind','CSS Framework']
 img: /img/tailwind/cover.png
 path: basicTailwind
-draft: false
+draft: true
 ---
 
 ---
