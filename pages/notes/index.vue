@@ -4,6 +4,7 @@ const toolIcons: Record<string, string> = {
    // Angular: 'devicon:angularjs',
    // Bootstrap: 'devicon:bootstrap',
    // CSS: 'devicon:css3',
+   Csharp: 'devicon:csharp',
    Docker: 'devicon:docker',
    // EditorConfig: 'vscode-icons:file-type-editorconfig',
    // EJS: 'vscode-icons:file-type-ejs',

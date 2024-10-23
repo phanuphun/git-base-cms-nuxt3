@@ -1,0 +1,22 @@
+---
+title: การใช้งาน Slice
+date: '2024/10/23'
+tool: Javascript
+tag: Array Method
+img: ''
+path: slice
+draft: false
+---
+
+slice เป็น Array Method สำหรับการแบ่ง Array โดยที่ Slice จะนำ Array เก่าออกมาแล้ว Return Array ใหม่ออกมาโดนที่ Array เก่ายังคงค่าเดิมเอาไว้
+
+`arr.slice(start,end)`
+
+```js
+let arr = ['Apple','Banana','Carrot','Potato','Wasabi','Fennel']
+let new_arr = arr.slice(0,2)
+
+//output arr : ['Apple','Banana','Carrot','Potato','Wasabi','Fennel']
+//output new_arr : ['Apple','Banana']
+```
+

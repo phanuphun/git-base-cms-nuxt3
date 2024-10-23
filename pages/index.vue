@@ -12,11 +12,11 @@ useHead({
 })
 
 onMounted(() => {
-   if (isDark.value === true) {
-      document.body.classList.add('dark')
-   } else {
-      document.body.classList.remove('dark')
-   }
+   // if (isDark.value === true) {
+   //    document.body.classList.add('dark')
+   // } else {
+   //    document.body.classList.remove('dark')
+   // }
 })
 
 useHead({

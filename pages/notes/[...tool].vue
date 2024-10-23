@@ -26,7 +26,13 @@ onMounted(()=>{
                   <p class="px-2 text-xl font-semibold"> {{ note.title }}</p>
                </div>
                <div class="mt-4">
-                  <ContentRenderer :value="note" class="prose px-5">
+                  <div v-if="note.tag"
+                  class="w-full flex justify-start px-2 my-2 text-sm">
+                     <div class="px-3 py-1 bg-gray-200">
+                        #{{ note.tag }}
+                     </div>
+                  </div>
+                  <ContentRenderer :value="note" class="prose px-4">
                   </ContentRenderer>
                </div>
             </div>

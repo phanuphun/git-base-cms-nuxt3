@@ -1,0 +1,51 @@
+---
+title: การใช้งาน Property ในการเข้าถึง Field ในคลาส
+date: 2024/10/24
+tool: cSharp
+tag: OOP
+img: ""
+path: oopProperty
+draft: false
+---
+
+เป็น Method พิเศษในภาษา C# ที่ช่วยให้เข้าถึง Filed ในคลาสได้ผ่าน accessor ที่ชื่อว่า `get` กับ `set` โดยสามารถกำหนดได้ว่า Property ที่สร้างขึ้นมานั้นทำงานกัน Field ใดๆ โดยมีองค์ประกอบ 3 อย่างหลกๆดังนี้
+
+1. `get` : ตัวช่วยเรียกดูข้อมูล
+2. `set` : ตัวช่วยในการกำหนดข้อมูล
+3. `value` : ค่าที่กำหนดตอนเรียกใช้ property
+
+### การใช้ get และ set ของ Property
+
+```csharp
+internal class Employee{
+   private string name; // field
+   public string Name // property
+   {
+      get{return this.name;}
+      set{name = value;}
+   }
+}
+```
+
+```csharp
+static void Main(string[] args){
+   Employee emp2 = new Employee("Jakkrit", 90000);
+   emp2.Name //get
+   emp2.Name = "newName" //set
+}
+```
+
+ทั้งนี้เรายังสามารถลดรูป Property ได้ด้วยหรือที่เรียกว่า Short Hand ดังนี้
+
+```csharp
+internal class Employee{
+   private string name; // field
+   public string Name {get,set} // property
+}
+```
+
+การใช้ Short Hand Property ไม่จำเป็นต้องเขียนเองก็ได้แต่ใช้ auto-imprement property แทนได้
+
+1. เอาเมาส์คลุมที่ field ที่เราจะสร้าง property
+2. ไปที่ Edit -> Refactor -> Encapsulate Field (คีย์ลัด `Ctrl+R , Ctrl+E`)
+3. จากนั้นกด Apply เราก็จะได้ Property get set ของ Filed ที่เราต้องการมาแล้ว

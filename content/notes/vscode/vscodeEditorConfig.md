@@ -1,5 +1,5 @@
 ---
-title: ตั้งค่าไฟล์ .editorconfig
+title: การตั้งค่าไฟล์ .editorconfig
 date: '2024/10/17'
 tool: VsCode
 subTool: EditorConfig

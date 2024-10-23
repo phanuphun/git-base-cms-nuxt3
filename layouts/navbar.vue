@@ -23,19 +23,14 @@ watch(isModalOpen, (newVal) => {
 <template>
    <SearchModal :is-open="isModalOpen" @is-close="(v) => isModalOpen = v" />
 
-   <div class="w-full light-t flex z-90 dark:dark">
-      <header class="relative w-full px-24 flex flex-wrap justify-between items-center border-b-2 dark:dark-t">
-         <NuxtLink to="/">
-            <div class="py-2 my-2 text-3xl font-medium underline text-gray-500">
+   <div class="w-full light-t flex z-90 dark:dark h-[60px]">
+      <header class="relative w-full px-8 xl:px-24 flex flex-wrap justify-between items-center border-b-2 dark:dark-t">
+         <NuxtLink to="/" class="">
+            <div class="py-2 my-2 text-3xl font-medium underline text-gray-700">
                F I R S T
             </div>
          </NuxtLink>
          <div class="text-xl font-text font-semibold flex gap-4 ">
-            <!-- <NuxtLink to="/">
-               <span class="hover:text-blue-700 cursor-pointer dark:hover:text-blue-400">
-                  🏠 หน้าแรก
-               </span>
-            </NuxtLink> -->
             <NuxtLink to="/blogs">
                <span class="hover:text-blue-700 cursor-pointer dark:hover:text-blue-400">
                   BLOG
@@ -47,12 +42,6 @@ watch(isModalOpen, (newVal) => {
                </span>
             </NuxtLink>
          </div>
-         <!-- <div class="w-auto flex flex-row gap-3">
-            <IconF @click="openSearch()" name="uil:search" class="cursor-pointer"/>
-            <div>
-               <themeBtn></themeBtn>
-            </div>
-         </div> -->
       </header>
    </div>
 </template>

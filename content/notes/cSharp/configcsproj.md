@@ -1,0 +1,22 @@
+---
+title: การตั้งค่าไฟล์ .csproj เพื่อใช้โครงสร้างเดิม
+date: 2024/10/24
+tool: cSharp
+tag: Config
+img: ""
+path: configcsproj
+draft: false
+---
+
+ในเวอร์ชันใหม่ของ.NET เช่น.NET6 และ .NET8 นั้น มีการใช้ `Implicit Usings` และ `Top-level Statements` เพื่อให้การพัฒนาโปรเจกต์ง่ายขึ้น ทำให้โค้ดพื้นฐานที่เคยต้องสร้าง (เช่น namespace, class Program, และ Main) ถูกซ่อนหรือสร้างอัตโนมัติ
+
+- Top-level Statements (ตั้งแต่.NET6): ไม่จำเป็นต้องเขียนคลาส Program หรือเมธอด Main() อีก ถ้ามีเพียงจุดเริ่มต้นเดียวในโปรแกรม คุณสามารถเขียนโค้ดในระดับบนสุดได้เลย (Top-level) โดยไม่ต้องมีคลาส
+- Implicit Usings (ตั้งแต่.NET6): Library พื้นฐานเช่น System จะถูกนำเข้าอัตโนมัติ โดยไม่ต้องใช้คำสั่ง using ในไฟล์
+
+**วิธีการปรับไปใช้โครงสร้างเดิม**
+- เปิดไฟล์ `.csproj` หากเปิดใน Visual Studio ให้คลิ๊กขวาที่ Solution Explorer แล้วเลือก Edit Project File แล้วปรับ disable หรือ false ตามโค้ดด้านล่าง
+```csharp
+<EnableImplicitProgram>false</EnableImplicitProgram>
+<ImplicitUsings>disable</ImplicitUsings>
+```
+
