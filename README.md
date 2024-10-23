@@ -1,7 +1,7 @@
 
 <div align="center">
    <h1>
-      Personal Blog
+      Code Notes
    </h1>
    <p>
      A personal blog where I will write down anything that I have learned. <br>
