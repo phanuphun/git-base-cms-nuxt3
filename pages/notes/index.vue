@@ -75,7 +75,8 @@ async function getLengthContent(tool: string): Promise<number> {
             <NuxtLink :to="`notes/${key}`" class="w-full">
                <div class="w-full h-full flex items-center gap-4 py-3 px-4">
                   <iconF :name="checkToolsIcon(key)"></iconF>
-                  {{ key }}
+                  <span v-if="key === 'Csharp'">C#</span>
+                  <span v-else="key === 'Csharp'">{{ key }}</span>
                </div>
             </NuxtLink>
          </div>
