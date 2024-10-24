@@ -22,8 +22,11 @@ useTocData(data.value?.body?.toc?.links!)
                <div class="mt-8">
                   <div class="texet-center p-0">
                      <h1 class="text-5xl font-semibold">{{ doc.title }}</h1>
-                     <div class="text-gray-500 text-sm mt-2">
-                        วันที่: {{ formatDate(doc.date) }}
+                     <div class="text-gray-500 text-md mt-8">
+                        Date: {{ formatDate(doc.date) }}
+                     </div>
+                     <div class="text-gray-500 text-md">
+                        By Phanuphun Namwong
                      </div>
                   </div>
                </div>

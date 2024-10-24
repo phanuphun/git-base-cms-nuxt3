@@ -24,9 +24,9 @@ watch(isModalOpen, (newVal) => {
    <SearchModal :is-open="isModalOpen" @is-close="(v) => isModalOpen = v" />
 
    <div class="w-full light-t flex z-90 dark:dark h-[60px]">
-      <header class="relative w-full px-8 xl:px-24 flex flex-wrap justify-between items-center border-b-2 dark:dark-t">
-         <NuxtLink to="/" class="">
-            <div class="py-2 my-2 text-3xl font-medium underline text-gray-700">
+      <header class="relative w-full px-8 xl:px-24 flex flex-wrap justify-end sm:justify-between items-center border-b-2 dark:dark-t">
+         <NuxtLink to="/" class="hidden sm:flex">
+            <div class="my-2 text-3xl font-medium underline text-gray-700">
                F I R S T
             </div>
          </NuxtLink>
@@ -41,6 +41,11 @@ watch(isModalOpen, (newVal) => {
                   NOTE
                </span>
             </NuxtLink>
+            <!-- <NuxtLink to="/notes">
+               <span class="hover:text-blue-700 cursor-pointer dark:hover:text-blue-400">
+                  ARCHIVE
+               </span>
+            </NuxtLink> -->
          </div>
       </header>
    </div>

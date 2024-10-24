@@ -1,7 +1,14 @@
 <script setup lang="ts">
+useHead({
+   title: "Phanuphun.na - Note",
+   meta: [
+      { name: "description", content: "Phanuphun.na - Note" }
+   ]
+})
 
 const toolIcons: Record<string, string> = {
    // Angular: 'devicon:angularjs',
+   ASPDotNetCore:'devicon:dotnetcore',
    // Bootstrap: 'devicon:bootstrap',
    // CSS: 'devicon:css3',
    Csharp: 'devicon:csharp',
@@ -21,7 +28,7 @@ const toolIcons: Record<string, string> = {
    // MySQL: 'devicon:mysql',
    // NodeJs: 'devicon:nodejs',
    NPM: 'devicon:npm',
-   // Nuxt: 'devicon:nuxtjs',
+   Nuxt: 'devicon:nuxtjs',
    // PHP: 'devicon:php',
    // Postgresql: 'devicon:postgresql',
    // Postman: 'devicon:postman',
@@ -56,15 +63,12 @@ function checkToolsIcon(tool: string): string {
 
 async function getLengthContent(tool: string): Promise<number> {
    const { data } = await useAsyncData('note', () =>
-      queryContent('/notes')
+      queryContent('/notes/')
          .where({ tool: { $regex: new RegExp(tool, 'i') } })
          .count()
    )
    return data.value! || 0
 }
-
-
-
 </script>
 
 <template>
@@ -76,6 +80,7 @@ async function getLengthContent(tool: string): Promise<number> {
                <div class="w-full h-full flex items-center gap-4 py-3 px-4">
                   <iconF :name="checkToolsIcon(key)"></iconF>
                   <span v-if="key === 'Csharp'">C#</span>
+                  <span v-else-if="key === 'ASPDotNetCore'">ASP.NET Core</span>
                   <span v-else="key === 'Csharp'">{{ key }}</span>
                </div>
             </NuxtLink>

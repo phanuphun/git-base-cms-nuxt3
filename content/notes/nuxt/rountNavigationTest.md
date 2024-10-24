@@ -1,0 +1,44 @@
+---
+title: พื้นฐาน Routing
+date: '2024/10/24'
+tool: Nuxt
+tag: Basic
+img: ''
+path: rountNavigationTest
+draft: false
+---
+
+
+<mermaid>
+flowchart LR
+        index.vue
+        blogs.vue["blogs.vue
+        < NuxtPage >"]
+        fdBlogs[📁blogs]
+        indexBlog[🏠 index.vue]
+        ...blogId.vue
+        index.vue ==> blogs.vue
+        blogs.vue ==> fdBlogs
+        fdBlogs <== ส่งหน้าแรกของ blogs ==> indexBlog
+        fdBlogs == blog id 1==> ...blogId.vue
+        fdBlogs == blog id 2==> ...blogId.vue
+        fdBlogs == blog id N==> ...blogId.vue
+        homes.vue["homes.vue
+        < NuxtPage >"]
+        fdHomes[📁homes]
+        indexHome[🏠 index.vue]
+        ...homeId.vue
+        index.vue ==> homes.vue
+        homes.vue ==> fdHomes
+        fdHomes == home id 1==> ...homeId.vue
+        fdHomes == home id 2==> ...homeId.vue
+        fdHomes == home id N==> ...homeId.vue
+        fdHomes <== ส่งหน้าแรกของ homes ==> indexHome
+</mermaid>
+
+|Topic|Description|
+|:---:|:---:|
+| `<NuxtPage/>` | จะเชื่อมไปยังหน้าต่างๆได้โดยเมื่อ Render เป็น HTML จะกลายเป็น `<a>` จะอิงตามโครงสร้างโฟลเดอร์ใน `pages` ซึ่งจะจัดการ rounting โดยอัตโนมัติ|
+| `index.vue` |ในโฟลเดอร์ จะทำงานเป็นหน้าเริ่มต้น (default) ของ path นั้น|
+| `(folderName)` |โฟลเดอร์ที่ถูกครอบด้วย `( )` จะเป็นการจัดกลุ่มของไฟล์เฉยๆ ไม่จำเป็นต้อง /path/filename ในการเข้าถึง สามารถเข้าถึงได้จาก root นั้นๆได้เลย /filename|
+|`useRoute()`| เป็น Composable ในการเข้าถึง path url เช่น ทำการสร้าง Instant ของ useRoute() ขึ้นมาแล้วเรียกใช้ params ที่ส่งเข้ามาได้ `route.params.id`|

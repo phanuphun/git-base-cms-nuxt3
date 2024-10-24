@@ -15,7 +15,6 @@ slice เป็น Array Method สำหรับการแบ่ง Array �
 ```js
 let arr = ['Apple','Banana','Carrot','Potato','Wasabi','Fennel']
 let new_arr = arr.slice(0,2)
-
 //output arr : ['Apple','Banana','Carrot','Potato','Wasabi','Fennel']
 //output new_arr : ['Apple','Banana']
 ```

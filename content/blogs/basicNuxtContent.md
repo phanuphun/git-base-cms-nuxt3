@@ -1,7 +1,7 @@
 ---
-title: Nuxt Content
+title: บันทึกการใช้งาน Nuxt Content ในการทำเว็บบล็อค ในรูปแบบ Git-base CMS
 date: '2024/09/12'
-description: บันทึกการใช้งาน Nuxt Content ในการทำเว็บบล็อค ในรูปแบบ Git-base CMS
+description:
 tag: Note
 tags: ['Nuxt' , 'Nuxt Module' , 'Vue' , 'CMS']
 img: /img/nuxtContent/cover2.png

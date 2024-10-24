@@ -63,15 +63,16 @@ function getData() {
                   </div>
                   <div class="w-full sm:px-4 flex justify-start items-start pb-2 mt-4 am:mt-0">
                      <div>
-                        <p class="text-2xl font-semibold">
+                        <p class="text-2xl">
                            {{ a.title }}
                         </p>
-                        <p class="text-md text-gray-400">
+                        <p class="text-md text-gray-400 mt-2">
                            {{ useDateConverter(a.date) }}
                         </p>
-                        <p class="text-xl mt-2">
+
+                        <!-- <p class="text-xl mt-2">
                            {{a.description}}
-                        </p>
+                        </p> -->
                         <div class="mt-2 flex flex-wrap gap-2" >
                            <Tag v-for="tag in a.tags">{{ tag }}</Tag>
                         </div>
@@ -84,8 +85,8 @@ function getData() {
       </div>
 
       <div class="w-full flex flex-row justify-end gap-2 mt-4">
-         <Btn name="ก่อนหน้า" @click="previosePage" :disable="skip === 0" />
-         <Btn name="ถัดไป" @click="nextPage" :disable="skip+limit >= length!" />
+         <Btn name="PREVIOUS" @click="previosePage" :disable="skip === 0" />
+         <Btn name="NEXT" @click="nextPage" :disable="skip+limit >= length!" />
       </div>
    </div>
 </template>

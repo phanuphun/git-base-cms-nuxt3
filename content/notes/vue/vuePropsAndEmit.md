@@ -2,6 +2,7 @@
 title: การรับและการส่งออกค่าใน Component
 date: '2024/10/17'
 tool: Vue
+tag: Basic
 img: ''
 path: vuePropsAndEmit
 draft: false

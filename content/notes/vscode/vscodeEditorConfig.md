@@ -4,6 +4,7 @@ date: '2024/10/17'
 tool: VsCode
 subTool: EditorConfig
 img: ''
+tag: Config
 path: npmPublishPackage
 draft: false
 ---

@@ -16,8 +16,6 @@ split เป็น Array Method ที่เหมาะใช้งานกั
 
 ```js
 let text = 'Lorem ipsum dolor sit amet'
-text.split(' ')
-//output : [ 'Lorem', 'ipsum', 'dolor', 'sit', 'amet' ]
-text.split(' ',3)
-//output : [ 'Lorem', 'ipsum', 'dolor' ]
+text.split(' ') //output : [ 'Lorem', 'ipsum', 'dolor', 'sit', 'amet' ]
+text.split(' ',3) //output : [ 'Lorem', 'ipsum', 'dolor' ]
 ```

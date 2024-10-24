@@ -1,5 +1,12 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+   app:{
+      head:{
+         link:[
+            { rel: 'icon', type: 'image/jpg', href: '/favicon.jpg' },
+         ]
+      }
+   },
    devtools: { enabled: true },
    components: true,
    modules: [

@@ -1,4 +1,4 @@
-export const useDateConverter = (dateString: string): string => {
+export const useDateConverter = (dateString: string , lang?: 'th-TH' | 'en-EN'): string => {
   const date = new Date(dateString);
   const options: Intl.DateTimeFormatOptions = {
     timeZone: 'Asia/Bangkok',
@@ -7,5 +7,7 @@ export const useDateConverter = (dateString: string): string => {
     day: 'numeric',
   };
 
-  return date.toLocaleString('th-TH', options);
+  if(!lang) lang = 'en-EN';
+
+  return date.toLocaleString(lang, options);
 };
