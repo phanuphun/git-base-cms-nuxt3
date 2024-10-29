@@ -2,7 +2,7 @@
 title: แก้ปัญหาเปิด https://localhost ไม่ได้
 date: 2024/10/24
 tool: ASPDotNetCore
-tag: MVC
+tag: Config
 img: ""
 path: mvcDirectorryStructure
 draft: false

@@ -1,0 +1,17 @@
+---
+title: จัดการข้อมูลจาก Form ด้วย ModelState
+date: 2024/10/30
+tool: ASPDotNetCore
+tag: MVC
+img: ""
+path: modelState
+---
+
+`ModelState` ใช้ในการจัดการข้อมูลที่ถูกส่งจาก Form ไปยัง Controller รวมถึงการตรวจสอบความถูกต้องของข้อมูลที่ผู้ใช้ป้อนเข้า
+
+|Property|Desciption|
+|:---:|:---:|
+|`.IsValid`|ใช้เพื่อตรวจสอบว่าข้อมูลในโมเดลที่ส่งมาถูกต้องหรือไม่ (จะตรวจสอบจาก Model)|
+|`.Remove`| ใช้เพื่อลบการตรวจสอบออกโดยระบุ Property ของ Model ที่ต้องการลบออกไป **ModelState.Remove("Username")**|
+|`.AddModelError`|ใช้เพิ่มข้อผิดพลาดของ Property นั้นๆในกรณีที่มีการตรวจสอบแยกออกมาจาก Model **ModelState.AddModelError("Username", "ชื่อผู้ใช้งานไม่ถูกต้อง");**|
+|`.Clear`|ใช้เพื่อลบข้อผิดพลาดทั้งหมด|

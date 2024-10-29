@@ -1,0 +1,25 @@
+---
+title: การส่งค่าจาก Controller ไปยัง View
+date: 2024/10/24
+tool: ASPDotNetCore
+tag: MVC
+img: ""
+path: mvcTempAndViewData
+---
+
+|Properties|Description|
+|:---:|:---:|
+|`TempData`|ช้ในการส่งข้อมูลจาก Controller หนึ่งไปยังอีก Controller หรือ View โดยที่ TempData มีความสามารถในการเก็บค่าที่สามารถถูกใช้ได้เพียงครั้งเดียว|
+|`ViewData`|ใช้ในการส่งข้อมูลจาก Controller ไปยัง View มีอายุอยู่แค่ในรอบการเรียกดู (request) เดียว ซึ่งหมายความว่าข้อมูลจะถูกลบเมื่อ View ถูกเรนเดอร์เสร็จ|
+|`ViewBag`|ใช้ในการส่งข้อมูลที่เป็น Dynamic Object ไปยัง Views ซึ่งสะดวอย่างมากในการใช้งาน โดยสามารถเรียกใช้ @ViewBag.PropertyName ได้เลย|
+
+```csharp
+@{
+   // ViewData & TempData
+   var username = ViewData["Username"] as string;
+   var errMsg = TempData["errMsg"] as string;
+}
+
+ // ViewBag
+ @ViewBag.propertyName
+```

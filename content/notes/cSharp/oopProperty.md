@@ -14,7 +14,7 @@ draft: false
 2. `set` : ตัวช่วยในการกำหนดข้อมูล
 3. `value` : ค่าที่กำหนดตอนเรียกใช้ property
 
-### การใช้ get และ set ของ Property
+**การใช้ get และ set ของ Property**
 
 ```csharp
 internal class Employee{

@@ -1,5 +1,5 @@
 ---
-title: Tag Helpers ตัวช่วยในการส่งค่า
+title: Tag Helpers ตัวช่วยในการส่งค่าจาก View ไปยัง Controller
 date: 2024/10/24
 tool: ASPDotNetCore
 tag: MVC
@@ -7,7 +7,7 @@ img: ""
 path: mvcTaghelper
 ---
 
-**Tag Helpers** : ใน ASP.NET Core ซึ่งใช้ในการสร้างลิงก์และส่งค่าผ่าน URL อย่างสะดวกใน HTML โดยเชื่อมกับ Routing และ Controller/Action ของแอปพลิเคชัน MVC หรือ Razor Pages
+**Tag Helpers** : ใช้ในการสร้างลิงก์และส่งค่าผ่าน URL ใน HTML
 
 |Tag|Description|
 | :---: | --- |

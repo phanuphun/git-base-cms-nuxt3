@@ -1,0 +1,19 @@
+---
+title: การ Return ค่าจาก Controller
+date: 2024/10/30
+tool: ASPDotNetCore
+tag: MVC
+img: ""
+path: mvcNewModels
+---
+
+ใน Method ที่มีการใช้ `IActionView` ซึ่งเป็นการกำหนดประเภทของผลลัพธ์ที่เราจะ Return ออกไปจาก Controller Action นั้นๆ
+|Type|Description|
+|:---:|:---:|
+|`View()`|ใช้เพื่อแสดง View ที่มีชื่อเดียวกันกับ Action สามารถส่ง Model ไปยัง View ได้อีกด้วย เช่น `return View(model);`|
+|`RedirectToAction()`|ใช้เพื่อทำการ Redirect ไปยัง Action อื่นๆใน Controller เดียวกันหรือ Controller อื่นๆก็ได้ เช่น **return RedirectToAction("Index");**|
+|`NotFound()`|ใช้เพื่อส่งคืนสถานะ HTTP 404 (ไม่พบ)|
+|`BadRequest()`|ใช้เพื่อส่งคืนสถานะ HTTP 400 (คำขอไม่ถูกต้อง)|
+|`Ok()`|ใช้เพื่อส่งคืนสถานะ HTTP 200 (สำเร็จ) พร้อมกับข้อมูล เช่น **return Ok(data);**|
+|`Json()`|ใช้เพื่อส่งคืนข้อมูลในรูปแบบ JSON|
+
