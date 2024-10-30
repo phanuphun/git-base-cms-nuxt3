@@ -2,7 +2,7 @@
 title: แพ็คเกจ Entity Framework Core ในการเชื่อมต่อและจัดการฐานข้อมูล
 date: 2024/10/24
 tool: ASPDotNetCore
-tag: Package
+tag: EF Core
 img: ""
 path: mvcPackageBasics
 ---
