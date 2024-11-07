@@ -32,7 +32,7 @@ const toolIcons: Record<string, string> = {
    // PHP: 'devicon:php',
    // Postgresql: 'devicon:postgresql',
    // Postman: 'devicon:postman',
-   // Prisma: 'devicon:prisma',
+   Prisma: 'devicon:prisma',
    // Puppeteer: 'devicon:puppeteer',
    // Python: 'devicon:python',
    // Socketio: 'devicon:socketio',
@@ -80,7 +80,7 @@ async function getLengthContent(tool: string): Promise<number> {
                <div class="w-full h-full flex items-center gap-4 py-3 px-4">
                   <iconF :name="checkToolsIcon(key)"></iconF>
                   <span v-if="key === 'Csharp'">C#</span>
-                  <span v-else-if="key === 'ASPDotNetCore'">ASP.NET Core</span>
+                  <span v-else-if="key === 'ASPDotNetCore'">ASP.NET</span>
                   <span v-else="key === 'Csharp'">{{ key }}</span>
                </div>
             </NuxtLink>

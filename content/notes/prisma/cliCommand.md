@@ -1,0 +1,14 @@
+---
+title: คำสั่ง Cli เบื้องต้น
+date: '2024/11/07'
+tool: Prisma
+tag: Basic
+img: ''
+path: cliCommand
+draft: false
+---
+- `npx prisma init` : เริ่มการสร้างไฟล์ .env ที่มีการตั้งค่าเริ่มต้นสำหรับเชื่อมฐานข้อมูลมาแล้ว พร้อมกับสร้าง /prisma/Prisma.schema มาให้
+- `npx prisma migrate dev --name <name>` : migrate ตารางจาก prisma.schema ขึ้นฐานข้อมูล
+- `npx prisma studio` : แสดงฐานข้อมูลแบบ GUI ของ Prisma เองเพื่อความสะดวในารใช้งาน
+- `npx prisma db pull` : ตรวจสอบฐานข้อมูลเพื่อมาอัปเดต Prisma Schema
+- `npx prisma generate` : ตรวจสอบไฟล์ Prisma.Schema เพื่อสร้าง Prisma Clien ของเราขึ้นมา เช่นการใช้ฟังก์ชัน **findMany**, **create**, **update**, **delete**
