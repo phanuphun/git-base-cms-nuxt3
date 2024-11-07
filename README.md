@@ -7,13 +7,13 @@
     This blog is a Git-based CMS that manages content through Nuxt Studio
    </p>
    <p>
-      
+
    </p>
    <p>
-      <a href="https://phanuphun-blog.vercel.app/blogs"> phanuphun-blog.vercel.app/blogs </a>
+      <a href="https://phanuphun-blog.vercel.app"> phanuphun-blog.vercel.app </a>
    </p>
 </div>
 <br>
 
- 
+
 

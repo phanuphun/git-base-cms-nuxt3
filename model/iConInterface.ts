@@ -5,7 +5,7 @@ export interface Colors {
    hover:string
 }
 
-export interface iconValue {
+export interface IconValue {
    icon:string
    colors?:Colors
 }
@@ -55,7 +55,7 @@ export const iconColors:Record<string,Colors> = {
    },
 }
 
-export const toolIcons: Record<string, iconValue> = {
+export const toolIcons: Record<string, IconValue> = {
    ASPDotNetCore:{icon:'devicon:dotnetcore',colors:iconColors["purple"]},
    Csharp: {icon:'devicon:csharp',colors:iconColors["purple"]},
    Docker: {icon:'devicon:docker',colors:iconColors["sky"]},

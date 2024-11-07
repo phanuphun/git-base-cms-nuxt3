@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import type { Colors , IconValue} from '~/model/iConInterface';
 import { toolIcons } from '~/model/iConInterface';
 useHead({
    title: "Phanuphun.na - Note",
@@ -8,14 +9,12 @@ useHead({
 })
 
 
-const toolIconslist = toolIcons
-
 </script>
 
 <template>
    <div class="w-full min-h-[calc(100vh-200px)] ">
       <div class="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-         <div v-for="(tool, key) in toolIconslist" :key="key" class="w-full border-2 rounded-xl flex  items-center
+         <div v-for="(tool, key) in toolIcons" :key="key" class="w-full border-2 rounded-xl flex  items-center
          duration-200 hover:-translate-y-0.5 cursor-pointer "
          :class="[tool.colors?.border , tool.colors?.bg , tool.colors?.hover]">
             <NuxtLink :to="`notes/${key}`" class="w-full">
