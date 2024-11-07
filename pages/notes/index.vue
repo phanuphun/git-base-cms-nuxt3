@@ -16,7 +16,7 @@ interface Colors {
 
 interface IconValue {
    icon:string
-   colors?:Colors
+   colors:Colors
 }
 
 const iconColors:Record<string,Colors> = {
