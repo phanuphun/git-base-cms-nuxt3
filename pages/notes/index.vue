@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { toolIcons, type IconValue } from '~/model/iConInterface';
+import { toolIcons, type IconValue } from '../../model/iConInterface';
 
 
 useHead({
@@ -8,11 +8,11 @@ useHead({
       { name: "description", content: "Phanuphun.na - Note" }
    ]
 })
-let toolIconsList:Record<string,IconValue>
+let toolIconsList:Record<string,IconValue> = toolIcons;
 onMounted(()=>{
    toolIconsList = toolIcons;
+   console.log("tool icons from /notes/index.vue : ",toolIconsList);
 })
-
 </script>
 
 <template>
@@ -20,7 +20,7 @@ onMounted(()=>{
       <div class="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
          <div v-for="(tool, key) in toolIconsList" :key="key" class="w-full border-2 rounded-xl flex  items-center
          duration-200 hover:-translate-y-0.5 cursor-pointer "
-         :class="[tool.colors?.border , tool.colors?.bg , tool.colors?.hover]">
+         :class="[tool.colors!.border , tool.colors!.bg , tool.colors!.hover]">
             <NuxtLink :to="`notes/${key}`" class="w-full">
                <div class="w-full h-full flex items-center gap-4 py-3 px-4">
                   <iconF :name="tool.icon"></iconF>
@@ -34,4 +34,4 @@ onMounted(()=>{
    </div>
 </template>
 
-<style scoped></style>
+

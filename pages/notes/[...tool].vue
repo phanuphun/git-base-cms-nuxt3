@@ -8,11 +8,10 @@ const { data } = await useAsyncData('note', () =>
       .find()
 )
 
-let toolIconsList:Record<string,IconValue>
+let toolIconsList:Record<string,IconValue> = toolIcons;
 onMounted(() => {
    toolIconsList = toolIcons;
 })
-
 </script>
 
 <template>
@@ -21,14 +20,14 @@ onMounted(() => {
             [&>img:not(:first-child)]:mt-5 lg:[&>img:not(:first-child)]:mt-8">
          <div v-for="note in data" :key="note._id" class="break-inside-avoid mb-5 whitespace-normal">
             <div class="w-full border-2 rounded-2xl"
-            :class="[toolIconsList[note.tool].colors?.border]">
+            :class="[toolIconsList[note.tool].colors!.border]">
                <div class="w-full flex flex-row border-b-2 p-3 rounded-t-2xl"
-               :class="[toolIconsList[note.tool].colors?.bg2,toolIconsList[note.tool].colors?.border]">
+               :class="[toolIconsList[note.tool].colors!.bg2,toolIconsList[note.tool].colors!.border]">
                   <p class="px-2 text-xl font-semibold"> {{ note.title }}</p>
                </div>
                <div class="mt-4">
                   <div v-if="note.tag" class="w-full flex justify-start px-2 my-2 text-sm">
-                     <div class="px-3 py-1 rounded-full border" :class="[toolIconsList[note.tool].colors?.border]">
+                     <div class="px-3 py-1 rounded-full border" :class="[toolIconsList[note.tool].colors!.border]">
                         #{{ note.tag }}
                      </div>
                   </div>

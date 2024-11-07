@@ -6,6 +6,13 @@ useHead({
       class: "font-body text-black border-white",
    }
 });
+import { toolIcons, type IconValue } from '~/model/iConInterface';
+let toolIconsList:Record<string,IconValue>
+onMounted(() => {
+   toolIconsList = toolIcons;
+   console.log("tool icons from notes.vue : ",toolIconsList);
+})
+
 </script>
 
 <template>
@@ -21,4 +28,4 @@ useHead({
 
 </template>
 
-<style lang="scss" scoped></style>
+
