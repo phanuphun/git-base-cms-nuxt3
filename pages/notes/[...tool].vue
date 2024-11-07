@@ -3,7 +3,7 @@ const { tool } = useRoute().params
 const { data } = await useAsyncData('note', () =>
    queryContent('/notes')
       .where({ tool: { $regex: new RegExp(String(tool), 'i') } })
-      .sort({ date: -1 })
+      .sort({ date: -1 , path:-1})
       .find()
 )
 
@@ -62,29 +62,37 @@ const iconColors:Record<string,Colors> = {
       bg:"bg-pink-50",
       bg2:"bg-pink-100"
    },
+   gray:{
+      border:"border-gray-500",
+      hover:"hover:bg-gray-100",
+      bg:"bg-gray-50",
+      bg2:"bg-gray-100"
+   }
 }
 
 const toolIcons: Record<string, IconValue> = {
    ASPDotNetCore:{icon:'devicon:dotnetcore',colors:iconColors["purple"]},
    Csharp: {icon:'devicon:csharp',colors:iconColors["purple"]},
    Docker: {icon:'devicon:docker',colors:iconColors["sky"]},
+   Express: {icon:'devicon:express',colors:iconColors["gray"]},
    Git: {icon:'devicon:git',colors:iconColors["orange"]},
    Javascript: {icon:'devicon:javascript',colors:iconColors["yellow"]},
    Linux: {icon:'devicon:linux',colors:iconColors["yellow"]},
    NPM: {icon:'devicon:npm',colors:iconColors["red"]},
    Nuxt: {icon:'devicon:nuxtjs',colors:iconColors["green"]},
-   Prisma: {icon:'devicon:prisma',colors:iconColors["purple"]},
+   Prisma: {icon:'devicon:prisma',colors:iconColors["gray"]},
    Tailwind: {icon:'devicon:tailwindcss',colors:iconColors["sky"]},
    Typescript: {icon:'devicon:typescript',colors:iconColors["sky"]},
    VsCode: {icon:'devicon:vscode',colors:iconColors["sky"]},
    Vue: {icon:'devicon:vuejs',colors:iconColors["green"]},
+   Windows: {icon:'devicon:windows8',colors:iconColors["sky"]},
 }
 
 </script>
 
 <template>
    <div class="w-full h-full min-h-[calc(100vh-200px)]">
-      <div class="gap-5 lg:gap-8 columns-1 sm:columns-2 lg:columns-3
+      <div class="gap-5 lg:gap-8 columns-1 md:columns-2
             [&>img:not(:first-child)]:mt-5 lg:[&>img:not(:first-child)]:mt-8">
          <div v-for="note in data" :key="note._id" class="break-inside-avoid mb-5 whitespace-normal">
             <div class="w-full border-2 rounded-2xl"
@@ -99,7 +107,7 @@ const toolIcons: Record<string, IconValue> = {
                         #{{ note.tag }}
                      </div>
                   </div>
-                  <ContentRenderer :value="note" class="prose px-4">
+                  <ContentRenderer :value="note" class="prose px-4" >
                   </ContentRenderer>
                </div>
             </div>
@@ -107,3 +115,4 @@ const toolIcons: Record<string, IconValue> = {
       </div>
    </div>
 </template>
+

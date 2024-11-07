@@ -29,7 +29,9 @@ export default {
                      fontWeight: '600',
                   },
                   'pre': {
-                     // backgroundColor: theme('colors.gray.400'),
+                     backgroundColor: theme('colors.gray.100'),
+                     border: `2px solid ${theme('colors.gray.200')}`,
+                     borderRadius: theme('borderRadius.xl')
                   },
                   'h2':{
                      fontSize: theme('fontSize.4xl'),
@@ -54,8 +56,8 @@ export default {
             invert: {
                css: {
                   'code': {
-                  backgroundColor: `#1E242A`,
-                  color: theme('colors.red.500'),
+                     backgroundColor: `#1E242A`,
+                     color: theme('colors.red.500'),
                   },
                   'ul li::marker':{
                      color:'white'
@@ -67,7 +69,6 @@ export default {
    },
    plugins: [
       require('@tailwindcss/typography'),
-      require('@tailwindcss/line-clamp')
-   ],
+   ]
 }
 

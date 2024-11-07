@@ -25,7 +25,7 @@ export default defineNuxtConfig({
    },
    content: {
       highlight: {
-         theme: "material-theme-ocean",
+         // theme: "material-theme-ocean",
          langs:['csharp','js','ts','shell','vue','css','html','md']
       },
    },
