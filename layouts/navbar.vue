@@ -23,29 +23,19 @@ watch(isModalOpen, (newVal) => {
 <template>
    <SearchModal :is-open="isModalOpen" @is-close="(v) => isModalOpen = v" />
 
+   <!-- <div class="px-8 xl:px-24 mt-8 drop-shadow-2xl">
+      <div class="h-[60px] z-90 w-full rounded-full border-2 border-gray-500 drop-shadow-2xl">
+
+      </div>
+   </div> -->
    <div class="w-full light-t flex z-90 dark:dark h-[60px]">
-      <header class="relative w-full px-8 xl:px-24 flex flex-wrap justify-end sm:justify-between items-center border-b-2 dark:dark-t">
-         <NuxtLink to="/" class="hidden sm:flex">
-            <div class="my-2 text-3xl font-medium underline text-gray-700">
-               F I R S T
-            </div>
-         </NuxtLink>
+      <header class="relative w-full px-8 xl:px-24 flex flex-wrap justify-center sm:justify-center items-center border-b-2 dark:dark-t">
          <div class="text-xl font-text font-semibold flex gap-4 ">
-            <NuxtLink to="/blogs">
-               <span class="hover:text-blue-700 cursor-pointer dark:hover:text-blue-400">
-                  BLOG
-               </span>
-            </NuxtLink>
             <NuxtLink to="/notes">
-               <span class="hover:text-blue-700 cursor-pointer dark:hover:text-blue-400">
-                  NOTE
+               <span class="hover:text-blue-700 cursor-pointer dark:hover:text-blue-400 text-2xl">
+                NOTE
                </span>
             </NuxtLink>
-            <!-- <NuxtLink to="/notes">
-               <span class="hover:text-blue-700 cursor-pointer dark:hover:text-blue-400">
-                  ARCHIVE
-               </span>
-            </NuxtLink> -->
          </div>
       </header>
    </div>
