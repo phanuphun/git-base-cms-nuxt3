@@ -1,19 +1,9 @@
+## Code Notes
+This project uses Nuxt Content to take notes on what I've learned.<br>
+These notes are stored in a Git-based CMS and can be updated via Nuxt Studio.<br>
+Tech Stack: Nuxt, Tailwind CSS, Mermaid
 
-<div align="center">
-   <h1>
-      Code Notes
-   </h1>
-   <p>
-    This blog is a Git-based CMS that manages content through Nuxt Studio
-   </p>
-   <p>
 
-   </p>
-   <p>
-      <a href="https://phanuphun-blog.vercel.app"> phanuphun-blog.vercel.app </a>
-   </p>
-</div>
-<br>
 
 
 
